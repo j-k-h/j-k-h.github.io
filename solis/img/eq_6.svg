@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="486px" height="27px" viewBox="0 0 486 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Illustrations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-153.000000, -461.000000)">
+            <g id="Group-Copy" transform="translate(152.000000, 462.000000)">
+                <text id="(4.71)" font-family="IBMPlexMono-BoldItalic, IBM Plex Mono" font-size="9" font-style="italic" font-weight="bold" fill="#963636">
+                    <tspan x="0.3" y="18">(4.71)</tspan>
+                </text>
+                <text id="time-of-flight,-E-in" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold" fill="#963636">
+                    <tspan x="336" y="18">time-of-flight, E in radians</tspan>
+                </text>
+                <polyline id="Path-3" stroke="#963636" stroke-linejoin="bevel" points="178.232951 10.7146655 182.296088 10.7146655 185.382587 25.3489144 189.818939 0.424132147 205.803644 0.424132147"></polyline>
+                <text id="TOF-=-(E---esinE)-——" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold" fill="#963636">
+                    <tspan x="83" y="18">TOF = (E - esinE)   ———</tspan>
+                </text>
+                <text id="3" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold" fill="#963636">
+                    <tspan x="198.5" y="9">3</tspan>
+                </text>
+                <text id="a" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold" fill="#963636">
+                    <tspan x="192.5" y="12">a</tspan>
+                </text>
+                <text id="GM" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold" fill="#963636">
+                    <tspan x="193.5" y="25">GM</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

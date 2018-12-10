@@ -1,0 +1,95 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SOLIS:CHAT</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/tab.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <style>
+  /* CSS that is only referenced on this page specifically, minified to save space. */
+  #ascii{background-size:60%;background-position-x:left}.chat{padding:.25rem 0}.chat-author{color:#48486A;font-weight:700;text-transform: uppercase;}.admin{color:#963636}.timestamp{font-size:.25rem;opacity:.25;padding-right:.25rem}
+  </style>
+</head>
+
+<body>
+  <div class="bg-img" id="ascii" style="background-image: url(../img/ascii_3.png);"></div>
+  <button onclick="location.href='dash.html'">&#8592; BACK TO DASH</button>
+  <div class="tab" style="height: 32rem; right: 8rem;">
+    <div class="tabheader">
+      <img class="tabheader-corner" src="../img/drag.svg">
+      <hr class="header-rule">
+      <span class="tabheader-title">CHAT</span>
+    </div>
+    <div style="padding: .25rem 1rem;">
+      <h2>Team 396B</h2>
+      <h6 style="padding-bottom: 2rem;">Today, September 12, 1961</h6>
+      <hr />
+      <p class="chat"><span class="timestamp">06:49</span><span class="chat-author admin">Dorothy Vaughn >> </span>Requesting the documents for Explorer-1's orbit data please.</p>
+      <hr />
+      <p class="chat"><span class="timestamp">06:52</span><span class="chat-author">BOT >> </span>Please hold.</p>
+      <hr />
+      <p class="chat"><span class="timestamp">06:52</span><span class="chat-author">BOT >> </span>Please hold.</p>
+      <hr />
+      <p class="chat"><span class="timestamp">06:52</span><span class="chat-author">BOT >> </span>The files have been forwarded to your Solis account.</p>
+      <hr />
+      <p class="chat"><span class="timestamp">07:01</span><span class="chat-author admin">Dorothy Vaughn >> </span>Affirmative.</p>
+      <hr />
+      <div style="position: absolute; bottom: .5rem; width: 100%; display: inline;">
+        <input type="text" style="width: 90%; text-align: left;" placeholder="Type your response..."/>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab" style="height: 32rem; right: 16rem; top: 16rem;">
+    <div class="tabheader">
+      <img class="tabheader-corner" src="../img/drag.svg">
+      <hr class="header-rule">
+      <span class="tabheader-title">CHAT</span>
+    </div>
+    <div style="padding: .25rem 1rem;">
+      <h2>Team 402A</h2>
+      <h6 style="padding-bottom: 2rem;">Today, September 12, 1961</h6>
+      <hr />
+      <p class="chat"><span class="timestamp">06:49</span><span class="chat-author admin">Dorothy Vaughn >> </span>Morning ladies, we've got the latest gen calculations due by 6pm tonight.</p>
+      <hr />
+      <p class="chat"><span class="timestamp">06:52</span><span class="chat-author">Katherine Jackson >> </span>I can get started on the orbit calculations for the day if anyone wants to join me? :)</p>
+      <hr />
+      <p class="chat"><span class="timestamp">06:53</span><span class="chat-author">Katherine Jackson >> </span>or two people, I'm trying to leave early ;)</p>
+      <hr />
+      <p class="chat"><span class="timestamp">06:58</span><span class="chat-author">Kyndall Flowers >> </span>i got u katy. send em' over</p>
+      <hr />
+      <p class="chat"><span class="timestamp">07:01</span><span class="chat-author admin">Dorothy Vaughn >> </span>Thanks girls</p>
+      <hr />
+      <div style="position: absolute; bottom: .5rem; width: 100%; display: inline;">
+        <input type="text" style="width: 90%; text-align: left;" placeholder="Type your response..."/>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js'></script>
+  <div class="marquee" data-duplicated='true' data-direction='left' data-duration="20000" data-startVisible='true'>The contents of this internal website are 100% confidental. | &#9679; <i>This connection is secure</i> | IP: 107.23.593.62 | Location: Hampton, Virginia | Language: en | Time: 07:09 | Date: 09/12/1961 | Weather: &#9728; 64&#176; |</div>
+  <img src="../img/nasa.svg" height="18rem" class="nasa-icon"/>
+  <img src="../img/menu.svg" height="18rem" class="menu-icon"/>
+  <img src="../img/menu-close.svg" height="18rem" class="menu-close"/>
+
+  <div class="menu">
+    <img src="../img/logo-icon.svg" style="display: block; margin: 1.5rem auto"/>
+    <img src="../img/logo-txt.svg" style="display: block; margin: .25rem auto 2rem"/>
+    <div style="text-align: center;">
+      <a href="info.html"><img id="info" src="../img/info.svg"/></a>
+      <a href="../index.html"><img id="logout" src="../img/logout.svg" /></a>
+      <button class="menu-button" onclick="location.href='dash.html'">Dashboard</button>
+      <button class="menu-button" onclick="location.href='chat.html'">Chat</button>
+      <button class="menu-button" onclick="location.href='calc.html'">Calculate</button>
+      <button class="menu-button" onclick="location.href='report.html'">Report</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/draggable.js"></script>
+  <script type="text/javascript" src="../js/footer.js"></script>
+</body>
+</html>

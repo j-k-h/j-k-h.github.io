@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="481px" height="55px" viewBox="0 0 481 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Illustrations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-153.000000, -258.000000)" fill="#963636">
+            <g id="Group-2" transform="translate(152.000000, 258.000000)">
+                <text id="(4.67)" font-family="IBMPlexMono-BoldItalic, IBM Plex Mono" font-size="9" font-style="italic" font-weight="bold">
+                    <tspan x="0.3" y="30">(4.67)</tspan>
+                </text>
+                <text id="v-=-arccoss" font-family="IBMPlexMono-BoldItalic, IBM Plex Mono" font-size="9" font-style="italic" font-weight="bold">
+                    <tspan x="83" y="30">v</tspan>
+                    <tspan x="88.4" y="30" font-family="IBMPlexMono-Bold, IBM Plex Mono"> = arccoss</tspan>
+                </text>
+                <text id="true-anomaly-at-seco" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold">
+                    <tspan x="336" y="30">true anomaly at second burn</tspan>
+                </text>
+                <polygon id="[" points="151.967624 54.9232272 147 54.9232272 147 1.13872009e-13 151.967624 3.55271368e-15 151.967624 1.97051617 149.005391 1.97051617 149.005391 53.0551313 151.967624 53.0551313"></polygon>
+                <polygon id="[-copy" transform="translate(241.483812, 27.461614) rotate(-180.000000) translate(-241.483812, -27.461614) " points="243.967624 54.9232272 239 54.9232272 239 1.13872009e-13 243.967624 3.55271368e-15 243.967624 1.97051617 241.005391 1.97051617 241.005391 53.0551313 243.967624 53.0551313"></polygon>
+                <path d="M154,19.541 C154,12.3572695 155.388708,6.09453007 157.040539,3 L159.204,3 C157.391371,6.13136971 155.812629,11.5099577 155.812629,17.6621782 L155.812629,21.4198218 C155.812629,27.5720423 157.391371,32.9506303 159.204,36.082 L157.040539,36.082 C155.388708,32.9874699 154,26.7247305 154,19.541 Z" id="("></path>
+                <path d="M232.5,19.541 C232.5,12.3572695 233.888708,6.09453007 235.540539,3 L237.704,3 C235.891371,6.13136971 234.312629,11.5099577 234.312629,17.6621782 L234.312629,21.4198218 C234.312629,27.5720423 235.891371,32.9506303 237.704,36.082 L235.540539,36.082 C233.888708,32.9874699 232.5,26.7247305 232.5,19.541 Z" id="(-copy" transform="translate(235.102000, 19.541000) rotate(-180.000000) translate(-235.102000, -19.541000) "></path>
+                <text id="——————————---1" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold" letter-spacing="-0.200000003">
+                    <tspan x="159.5" y="24">—————————— </tspan>
+                    <tspan x="216.7" y="24">- 1</tspan>
+                </text>
+                <text id="tx-copy" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold">
+                    <tspan x="168" y="18">tx</tspan>
+                </text>
+                <text id="a-copy" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold">
+                    <tspan x="161" y="15">a</tspan>
+                </text>
+                <text id="(1-e-)" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold" letter-spacing="-0.200000003">
+                    <tspan x="180.5" y="17">(1-e )</tspan>
+                </text>
+                <text id="2" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="6" font-weight="bold" letter-spacing="-0.200000003">
+                    <tspan x="202.5" y="13">2</tspan>
+                </text>
+                <text id="B" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold">
+                    <tspan x="186.5" y="34">B</tspan>
+                </text>
+                <text id="r" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold">
+                    <tspan x="181" y="31">r</tspan>
+                </text>
+                <text id="————————————————" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold">
+                    <tspan x="152" y="42">————————————————</tspan>
+                </text>
+                <text id="e" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="9" font-weight="bold">
+                    <tspan x="194" y="46">e</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

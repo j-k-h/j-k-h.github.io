@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>menu-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="footer" transform="translate(-17.000000, -13.000000)" stroke="#000000" stroke-width="3">
+            <g id="menu-icon" transform="translate(19.000000, 14.000000)">
+                <path d="M3.2456987,7.51478057 L16.9419265,-6.18144723" id="Line-Copy-2" transform="translate(10.093813, 0.666667) rotate(-315.000000) translate(-10.093813, -0.666667) "></path>
+                <path d="M3.2456987,14.8481139 L16.9419265,1.1518861" id="Line-Copy-3" transform="translate(10.093813, 8.000000) rotate(-315.000000) translate(-10.093813, -8.000000) "></path>
+                <path d="M3.2456987,22.1814472 L16.9419265,8.48521943" id="Line-Copy-4" transform="translate(10.093813, 15.333333) rotate(-315.000000) translate(-10.093813, -15.333333) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
