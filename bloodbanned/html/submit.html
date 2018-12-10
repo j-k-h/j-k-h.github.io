@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <meta charset="utf-8">
+  <title>Submit - Should I Forgo Gay Sex to Give Blood?</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/submit.css">
+  <link rel="stylesheet" href="../css/animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700|Barlow:400,600,700,900|Neuton:300,400,400i" rel="stylesheet">
+  <script src="../css/submit.js"></script>
+</head>
+<body>
+  <h2 id="submit-header">What do you think the rule should be?</h2>
+  <div style="float: left; width: 100%;">
+    <form id="rule">
+      <input type="text" id="rule-text" name="rule" placeholder="type your response...">
+      <div style="float: right;">
+        <button style="float: right; width: 160px;" id="submit-form">
+          <svg id="bounce" viewBox="0 0 512 512" width="1.5rem" style="padding-left: 3px; transform: translateY(3px);">
+              <g>
+                <g>
+                  <path d="M491.318,235.318H20.682C9.26,235.318,0,244.578,0,256c0,11.423,9.26,20.682,20.682,20.682h470.636    c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path d="M505.942,241.375L329.454,64.887c-8.077-8.076-21.172-8.076-29.249,0c-8.076,8.077-8.076,21.172,0,29.249L462.069,256    L300.205,417.863c-8.076,8.077-8.076,21.172,0,29.249c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.587-2.019,14.625-6.058    l176.488-176.488C514.019,262.547,514.019,249.452,505.942,241.375z"/>
+                </g>
+              </g>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+  <p style="opacity: 0.75; pointer-events: none;">Or view other people's responses <a style="pointer-events: all;a" target="_blank" href="https://docs.google.com/spreadsheets/d/13iD4AqgsIvAaySCAhrbHCWqMiFOAU-Z8gq8h1S3Vm0c/edit?usp=sharing"><b>here</b></a>.</p>
+  <div class="footer-lg">
+    <div><h2 id="footer-title"><a href="../index.html">SHOULD I<br />FORGO GAY<br /> SEX TO GIVE<br />BLOOD?</a></h2></div>
+    <div class="footer-content"><b>NAVIGATION</b>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="prompt.html">Prompt</a></li>
+        <li><a href="problem.html">Problem</a></li>
+        <li><a href="q1.html">Question 1</a> — <a href="q2.html">2</a> — <a href="q3.html">3</a></li>
+        <li><a href="conclusion.html">Conclusion</a></li>
+        <li><a href="submit.html">Submit</a></li>
+      </ul>
+    </div>
+    <div class="footer-content"><b>RESOURCES</b>
+      <ul>
+        <li><a target="_blank" href="https://www.nytimes.com/2018/07/24/magazine/should-i-forgo-gay-sex-to-donate-blood.html">Original article</a></li>
+        <li><a target="_blank" href="https://www.redcrossblood.org/">Red Cross Blood</a></li>
+        <li><a target="_blank" href="https://www.hiv.gov/">HIV.gov</a></li>
+        <li><a target="_blank" href="https://www.glaad.org/resourcelist">LGBTQ Resources</a></li>
+
+      </ul>
+    </div>
+    <div id="lg-right" class="footer-content"><b>CREDIT</b>
+      <ul>
+        <li>Josh Krauth-Harding</li>
+        <li>Interaction I</li>
+        <li>Project II</li>
+        <li>Michael Cragg</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    var form = $('form#rule'),
+      url = 'https://script.google.com/macros/s/AKfycbxwmA5l0YydCAS3DwWA1Fg4Pnvna_YEtfS56xV88uB5kGdh3fFG/exec'
+
+    $('#submit-form').on('click', function(e) {
+      e.preventDefault();
+      console.log(form.serializeObject())
+      if($("#rule-text").val() === "") {
+        alert("You haven't written a rule yet!");
+        return;
+}
+      var jqxhr = $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: form.serializeObject(),
+        success: function() {
+          $("#rule-text").val("")
+          alert("Your rule has been submitted! Thank you!")
+        }
+      })
+    })
+  </script>
+
+</body>
+</html>

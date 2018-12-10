@@ -1,0 +1,100 @@
+body {
+  background-color: #EFE1CC;
+  padding-bottom: 18rem;
+}
+
+#submit-header {
+  margin-top: 3vw;
+  text-align: left;
+  line-height: 9rem;
+}
+
+input {
+  width: calc(100% - 200px);
+  height: 5rem;
+  border: none;
+  border-bottom: 2px solid #883434;
+  background-color: #FEF3E0;
+  border-radius: 4px;
+  font-family: 'Barlow';
+  font-weight: 400;
+  font-size: 3rem;
+  color: #883434;
+  padding-left: 1rem;
+  cursor: url(../img/icon/cursor_a.svg), auto;
+  transition: 0.5s;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0px 10px 80px -20px rgba(84,0,0,0.75);
+}
+
+::placeholder {
+  color: #883434;
+  opacity: 0.5;
+}
+
+#submit-form {
+  height: 5.3rem;
+  margin-top: 0;
+  background-color: #883434;
+}
+
+#submit-form:hover {
+  background-color: transparent;
+  border: 2px solid #883434;
+}
+
+#submit-form svg {
+  fill: #EFE1cc;
+}
+
+#submit-form:hover svg {
+  fill: #883434;
+}
+
+.footer-lg {
+  margin-top: 2rem;
+  background-color: #883434;
+  width: 100%;
+  position: fixed;
+  height: 12rem;
+  left: 0;
+  bottom: 0;
+  padding: 2rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#lg-right {
+  grid-column-start: 5;
+}
+
+#footer-title {
+  font-size: 3rem;
+  font-family: 'Barlow Condensed';
+  font-weight: 900;
+  line-height: 2.8rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.footer-content b {
+  font-size: 1.25rem;
+}
+
+.footer-content {
+  font-family: 'Barlow';
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: .2rem 0;
+}

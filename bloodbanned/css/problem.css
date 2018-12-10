@@ -1,0 +1,53 @@
+.button-rich {
+  background-color: #EFE1CC;
+  border-radius: 8px;
+  width: 100%;
+  height: 10vw;
+  overflow: hidden;
+  margin: 1.5rem 0 3rem 0;
+  transition: 0.5s ease;
+  box-shadow: 0px 10px 80px -20px rgba(84,0,0,0.5);
+}
+
+.button-rich--img {
+  float: left;
+  background-image: url("../img/hand.jpg");
+  background-size: cover;
+  width: 10vw;
+  height: 100%;
+}
+
+.button-rich--img-overlay {
+  height: 6vw;
+  width: 6vw;
+  margin: 2vw;
+}
+
+.button-rich--header, .button-rich--text {
+  color: #883434;
+  margin-left: 10vw;
+  padding: 0 2vw;
+}
+
+.button-rich--header {
+  font-family: 'Barlow';
+  font-weight: 700;
+  color: #EA5858;
+  padding-top: 2vw;
+  font-size: 2vw;
+  line-height: 2vw;
+  padding-bottom: 1.3vw;
+}
+
+h6 {
+  transition: .5s ease;
+}
+
+h6:hover {
+  color: #883434;
+  transform: translateY(-1em);
+}
+
+h6 a:hover {
+  color: #883434;
+}

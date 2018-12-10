@@ -1,0 +1,38 @@
+#prompt-bg {
+  margin: -3em -5em;
+  top: 0;
+  z-index: -1;
+  height: 50vh;
+  width: 100vw;
+  display: block;
+  border-radius: 0;
+  box-shadow: 0px 10px 80px -20px rgba(84,0,0,0.75);
+}
+
+#prompt-title {
+  padding-top: 3rem;
+  text-align: left;
+  color: #FEF3E0;
+  position: absolute;
+  display: block;
+}
+
+#letter {
+  margin-top: 5rem;
+  background-color: #EFE1CC;
+  padding: 2rem 0;
+  border-radius: 4px;
+}
+
+h2#prompt-title {
+  line-height: 6rem;
+}
+
+h6#prompt-title {
+  padding-top: 19rem;
+  transition: .5s ease;
+}
+
+h6#prompt-title:hover {
+  transform: translateX(1em);
+}

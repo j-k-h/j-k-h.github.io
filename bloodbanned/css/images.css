@@ -1,0 +1,51 @@
+.img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  transition: 0.5s ease;
+  box-shadow: 0px 10px 80px -20px rgba(84,0,0,0.75);
+}
+
+.img:hover {
+}
+
+.tim {
+  background-image: url(../img/tim.jpg);
+}
+
+.tim-1 {
+  background-image: url(../img/tim-1.jpg);
+}
+
+.tim-2 {
+  background-image: url(../img/tim-2.jpg);
+}
+
+.martin {
+  background-image: url(../img/martin.jpg);
+}
+
+.martin-1 {
+  background-image: url(../img/martin-1.jpg);
+}
+
+.martin-2 {
+  background-image: url(../img/martin-2.jpg);
+}
+
+.mark {
+  background-image: url(../img/mark.jpg);
+}
+
+.mark-1 {
+  background-image: url(../img/mark-1.jpg);
+}
+
+.mark-2 {
+  background-image: url(../img/mark-2.jpg);
+}
+
+.hand {
+  background-image: url(../img/hand.jpg);
+}
