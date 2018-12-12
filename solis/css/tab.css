@@ -52,3 +52,19 @@
 .tab-center {
   transform: translateX(calc(50vw - 15em - 8rem)) translateY(calc(50vh - 9em - 12rem));
 }
+
+.submitted {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(150, 54, 54, 0.8);
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+}
+
+.submitted .tab {
+  height: 16em;
+  transform: translateX(calc(50vw - 15em)) translateY(calc(50vh - 8em));
+}

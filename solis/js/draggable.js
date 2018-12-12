@@ -55,3 +55,8 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+// Toggle alert tabs
+$(".toggle").click(function() {
+  $(".submitted").toggle();
+});

@@ -21,6 +21,18 @@
 
 <body>
   <div class="bg-img" id="ascii"></div>
+  <div class="submitted">
+    <div class="tab">
+      <div class="tabheader">
+        <img class="tabheader-corner" src="../img/drag.svg">
+        <hr class="header-rule">
+        <span class="tabheader-title">ALERT</span>
+      </div>
+      <div style="padding: 2rem;">Your report has been recieved and NASA HR has been alerted.</div>
+      <div style="text-align: center;"><button class="toggle" style="margin-top: 2rem;">OKAY</button></div>
+    </div>
+  </div>
+
   <button onclick="location.href='dash.html'">&#8592; BACK TO DASH</button>
   <div style="width: 50%; text-align: center; margin: 0 auto;">
     <h1 style="color: #963636; background-color: #12121A;">REPORT</h1>
@@ -29,7 +41,7 @@
     <input type="text" style="width: 90%; margin-bottom: 1rem;" placeholder="INCIDENT VICTIM"/>
     <input type="text" style="width: 90%; margin-bottom: 1rem;" placeholder="INCIDENT PERPETRATOR"/>
     <textarea name="incident_desc" cols="50" rows="6" style="width: 90%" placeholder="INCIDENT DESCRIPTION"></textarea>
-    <button style="margin-top: 2rem; width: 40%;">SUBMIT</button>
+    <button class="toggle" style="margin-top: 2rem; width: 40%;">SUBMIT</button>
   </div>
   <!-- FOOTER -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
