@@ -59,4 +59,13 @@ function dragElement(elmnt) {
 // Toggle alert tabs
 $(".toggle").click(function() {
   $(".submitted").toggle();
+  $(".input").val("")
+});
+
+$(".input").keydown(function(e) {
+  var key = e.which;
+  if (key == 13) {
+    $(".submitted").toggle();
+    $(".input").val("")
+}
 });
