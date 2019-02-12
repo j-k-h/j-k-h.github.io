@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 2em;
+  margin-bottom: 0;
+}
+
+/* NAV */
+.nav {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+}
+
+#previous {
+  height: 100%;
+  width: 40%;
+  left: 0;
+  cursor: w-resize;
+}
+
+#next {
+  height: 100%;
+  width: 60%;
+  right: 0;
+  position: absolute;
+  top: 0;
+  cursor: e-resize;
+
+}
+
+/* #RECIEPT */
+.reciept {
+  margin: 2em auto;
+  margin-top: 4em;
+  width: 80%;
+  border: 2px solid black;
+  font-family: 'Maison Neue Mono', monospace;
+  padding: 1em;
+  text-align: center;
+  background-color: white;
+}
+
+.reciept h3 {
+  font-size: 1.75em;
+  margin-bottom: .5em;
+}
+
+.reciept h4 {
+  font-size: .75em;
+  line-height: 1.2em;
+}
+
+.reciept a:after {
+  text-decoration: none;
+  content: "  \2197";
+}
+
+.reciept-content {
+  font-size: 1em;
+}
+
+table {
+	width: 96%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+#t-medium {
+  width: calc(100% - 2em);
+}
+
+#t-large {
+  width: calc(100% - 3em);
+}
+
+td {
+	padding:1em 0 0 0;
+	vertical-align: bottom;
+	background-image: radial-gradient(black 1px, white 0px);
+	background-size: 8px 8px;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+td span{
+  background-color:#fff;
+}
+
+td:first-child {
+	text-align: left;
+}
+
+td:first-child span {
+  padding-right:.25em;
+}
+
+td:last-child {
+  text-align:right;
+  width: 3em;
+}
+
+td:last-child span{
+	padding-left:.25em;
+}
+
+/* GLOBAL STYLES */
+h1, h2, h3, h4, h5, h6, p, .price {
+  font-family: 'Untitled Sans', sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+h2 {
+  text-decoration: underline;
+  padding: 1em 0 .25em 0;
+}
+
+h5 {
+  font-family: 'Maison Neue Mono', monospace;
+  color: red;
+  padding-bottom: 1em;
+}
+
+h5 span {
+  float: right;
+}
+
+p {
+  font-size: 1.25em;
+  color: black;
+}
+
+a {
+  color: inherit;
+}
+
+.price {
+  padding-top: 1.5rem;
+  font-size: 6em;
+  text-align: right;
+  line-height: .9em;
+  word-break: break-all;
+}
+
+.price sup {
+  font-size: 3rem;
+  border-bottom: 2px solid black;
+  margin-left: 0.25em;
+}
+
+.price p {
+  font-size: 2rem;
+}
+
+.images {
+  width: calc(100% - 4em);
+  position: fixed;
+  top: 2em;
+  z-index: -2;
+}
+
+.images img {
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+#read-assist {
+  position: fixed;
+  top: 0;
+  height: 8em;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, rgba(255,255,255,0) 100%);
+  z-index: -1;
+}
+
+.text {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 100%);
+}
+
+.text > h2 {
+  padding-top: 2em;
+}
+
+.score {
+  color: red;
+  font-family: 'Maison Neue Mono', monospace;
+  font-size: .8em;
+}
+
+.score::before {
+  content: "("
+}
+
+.score::after {
+  content: ")"
+}
+
+.need {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+#bar {
+  height: 2px;
+  background-color: gray;
+  width: 100%;
+  transform: translateY(4px);
+}
+
+#b-left {
+  margin-right: 1em;
+  text-align: right;
+}
+
+#b-right {
+  margin-left: 1em;
+}
+
+#marker {
+  width: 2px;
+  height: .5em;
+  background-color: black;
+  transform: translateY(-0.2em);
+  position: absolute;
+}
+
+#marker > h5 {
+  transform: translateX(-.5em);
+}
+
+::selection {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.99);
+}

@@ -1,0 +1,27 @@
+# Capitalism in Scholarship — Post-Tuition Expenses & Personal Consumerism
+
+## Statement of intent (v2):
+This website explores my personal expenses as a student, designer, and consumer. It also explores the necessity of said expenses — what items did I buy from merely being a consumer and which ones did I need to be successful in art school? This project aims to illuminate the vast amount of consumerism within our society and specifically explores who I am as a customer. Viewers of the website should be able to put themselves in my shoes as a way to address their own consumerism and potentially re-evaluate their spending habits.
+
+## Concept statement:
+The site will organize various products I've bought in a variety of ways such as price, necessity, and time (chronologically).
+
+### DENOTATIVE:
+tools, design, brand, products, [scholarship, student, study, project, college], detroit consumer
+
+### CONOTATIVE:
+useful, assistance, branding, [monetary, capitalist, product, advertising, manipulation], desire
+
+4 important aspects:
+1. The large price of items that are supplemental to school/work
+2. The connotation of brand (i.e. recognizable brands being popular)
+3. Being a personal consumer in today's economy
+4. The amount of money I spend
+
+Notes: playing with scale for price, bigger price = bigger number/higher opacity/brighter color. Some sort of system. Relationship between importance of items and price.
+* size based on price
+* size based on value
+
+Use media queries to acknowledge what device the user is using. If you're going to do this, narrow down target audience.
+
+Pose the question: what do _you_ spend money on?

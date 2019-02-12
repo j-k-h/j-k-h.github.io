@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../assets/fonts/Untitled_Sans_Regular.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../assets/fonts/Untitled_Sans_Regular_Italic.woff2') format('woff2');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Maison Neue Mono';
+  src: url('../assets/fonts/MaisonNeue-Mono.woff2') format('woff2');
+  font-style: normal;
+}
