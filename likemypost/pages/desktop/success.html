@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>desktop experience</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../../css/desktop.css" type="text/css">
+</head>
+
+<body style="background-color: #0E771D;">
+  <div id="desktop">
+    <div id="progress-bar">
+      <div id="progress" style="width: 100%"></div>
+    </div>
+    <div>
+      <h2 id="p1"><a href=../../index.html>likemypost.xyz</a></h2>
+      <h2 id="p2">success</h2>
+      <h2 id="p5"><a href="../about.html">?</a></h2>
+    </div>
+    <div class="post">
+      <h1>you've posted.</h1>
+    </div>
+    <div>
+      <h2 id="p3">are you rejecting<br />your insecurity?</h2>
+      <h2 id="p4">enter = post again</h2>
+    </div>
+  </div>
+  <script>
+  $(document).keydown(function(e) {
+    if (e.which == 8) {
+      window.history.back();
+      return false;
+    }
+  });
+
+  $(document).keydown(function(e) {
+    if (e.which == 13) {
+      window.location = "desktop.html";
+      return false;
+    }
+  });
+  </script>
+</body>
+
+</html>

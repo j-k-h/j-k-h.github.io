@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/desktop.css" type="text/css">
+</head>
+
+<body>
+  <!--
+  opted to do a script like this instead of media queries so I could keep my code as organized as this possible. index.html just acts as a hub instead of where all three of the experiences live.
+
+  it does however require the user to navigate back to index.html if they want to switch experiences, but in a true use-case that wouldn't happen(?)
+  -->
+
+  <script type="text/javascript">
+    if (screen.width <= 699){
+        document.location = "pages/mobile/mobile.html";
+      } else if (screen.width >= 700 && screen.width <= 1020) {
+        document.location = "pages/tablet/tablet.html";
+      } else {
+        document.location = "pages/desktop/desktop.html";
+      };
+</script>
+</body>
+
+</html>

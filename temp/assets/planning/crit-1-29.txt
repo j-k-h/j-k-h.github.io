@@ -1,7 +1,0 @@
-Make a user-journey. Decide what the experience should be. What should the user get from it? Figure out what your story is.
-
-> should they take an action, think about something? greater impact on spending, unexpected costs?
-
-endless scroll vs it being one page per product? total @ top of page, have bar fill up.
-
-maybe the bar could say more than just a bar. is it over the course of the semester, is it just what you need for the semester. is it a timeline?
