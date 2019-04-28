@@ -3,7 +3,7 @@ let shakeCount = 0;
 
 function initShakeListener() {
   let shakeEvent = new Shake({
-    threshold: 8;
+    threshold: 8
   });
   shakeEvent.start();
 
@@ -13,13 +13,13 @@ function initShakeListener() {
 }
 
 function shake() {
+  navigator.vibrate(300);
   emojis = [];
   for (let i = 0; i < Math.max((50 / (1 + Math.pow((shakeCount + 2) / 5, 5))), 1); i++) {
     emojis.push(new Emoji(Math.random(), Math.random()));
   }
   for (let emoji of emojis) {
     setTimeout(() => {
-      navigator.vibrate(300);
       $("#emoji-container").append(`<div class="emoji ${emoji.sprite}" data-x="${emoji.x}" data-y="${emoji.y}"></div>`);
       redrawEmojis();
     }, Math.random() * 1000);
