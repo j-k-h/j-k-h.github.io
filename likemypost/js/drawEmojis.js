@@ -13,7 +13,6 @@ function initShakeListener() {
 }
 
 function shake() {
-  navigator.vibrate(300);
   emojis = [];
   for (let i = 0; i < Math.max((50 / (1 + Math.pow((shakeCount + 2) / 5, 5))), 1); i++) {
     emojis.push(new Emoji(Math.random(), Math.random()));
