@@ -3,7 +3,7 @@ let shakeCount = 0;
 
 function initShakeListener() {
   let shakeEvent = new Shake({
-    threshold: 8
+    threshold: 15
   });
   shakeEvent.start();
 
