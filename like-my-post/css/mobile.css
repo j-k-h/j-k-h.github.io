@@ -50,9 +50,9 @@
 
 #shake-button {
   position: absolute;
-  bottom: 2em;
-  left: 2em;
-  font-size: 1.25em;
+  bottom: 3em;
+  left: 1em;
+  font-size: 1.5em;
   padding: 1rem;
   display: none;
 }
@@ -79,4 +79,20 @@
 
 #p5 {
   right: 1em;
+}
+
+#reset, #total-counter {
+  position: absolute;
+  font-size: 1.5em;
+  bottom: 1em;
+}
+
+#reset {
+  right: 1em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#total-counter {
+  left: 1em;
 }

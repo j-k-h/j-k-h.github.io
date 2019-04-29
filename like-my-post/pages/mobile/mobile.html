@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <title>mobile experience</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,6 +15,7 @@
 <body onresize="redrawEmojis()" onload="initShakeListener()">
   <button id="shake-button" onclick="shake()">Simulate a shake</button>
   <div id="emoji-container"></div>
+  <h2 id="total-counter">Validation left: <span id="total-used"></span></h2>
   <div id="mobile">
     <h2 id="p1"><a href=../../index.html>likemypost.xyz</a></h2>
     <h2 id="p5"><a href="../about.html">?</a></h2>
