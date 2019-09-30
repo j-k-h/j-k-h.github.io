@@ -4,6 +4,16 @@ html, body {
   height: 100%;
 }
 
+@font-face {
+  font-family: "Oroban";
+  src: url("Oroban-ElegansItalic.woff2") format("woff2"),
+}
+
+@font-face {
+  font-family: "Surt";
+  src: url("Surt-Regular.woff2") format("woff2"),
+}
+
 #wrapper {
   height: 100%;
   width: 100%;
@@ -12,7 +22,7 @@ html, body {
   align-items: center;
 }
 
-#left,#middle,#right {
+#left, #middle, #right {
   width: 33.3333%;
   height: 100%;
   text-align: center;
@@ -21,25 +31,28 @@ html, body {
   align-items: center;
 }
 
+#adverb, #adjective, #noun {
+  font-family: "Oroban";
+  font-size: 6em;
+}
+
 h1 {
   font-size: 24px;
-  font-family: sans-serif;
+  font-family: "Surt";
   line-height: .9em;
   font-weight: normal;
   display: inline;
-  font-family: "Commune NuitDebout", sans-serif;
 }
 
 a {
-  color: black;
+  cursor: pointer;
 }
 
-a > h1:hover {
+a>h1:hover {
   text-decoration: underline;
-  color: blue;
 }
 
-#copy,#reroll,#credit {
+#copy, #reroll, #credit, #party, #normal {
   position: absolute;
   padding: 0px 15px;
 }
@@ -57,10 +70,29 @@ a > h1:hover {
 #credit {
   bottom: 0;
   left: 0;
+  color: black;
 }
 
-@media only screen and (max-width: 600px) {
-  #left,#middle,#right {
+#party, #normal {
+  bottom: 0;
+  right: 0;
+}
+
+#normal {
+  display: none;
+}
+
+#rainbowBG {
+  display: none;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 780px) {
+  #left, #middle, #right {
     width: 100%;
     height: 33.3333%;
   }

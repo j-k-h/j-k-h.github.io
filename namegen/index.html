@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/party.css" type="text/css">
 </head>
 
 <body>
+  <div id="rainbowBG"></div>
   <div id="wrapper">
     <div id="left">
       <h1 id="adverb"></h1>
@@ -19,10 +21,13 @@
     <div id="right">
       <h1 id="noun"></h1>
     </div>
+    <a onclick="copy()"><h1 id="copy">copy</h1></a>
+    <a onclick="location.reload();"><h1 id="reroll">reroll</h1></a>
+    <a href="https://www.jkh.design/"><h1 id="credit">jkh.design</h1></a>
+    <a onclick="party()"><h1 id="party">party</h1></a>
+    <a onclick="normal()"><h1 id="normal">normal</h1></a>
   </div>
-  <a href="#"><h1 id="copy">copy</h1></a>
-  <a href="#"><h1 id="reroll">reroll</h1></a>
-  <a href="#"><h1 id="credit">jkh.design</h1></a>
+
 
   <script src="js/words.js"></script>
   <script src="js/script.js"></script>
