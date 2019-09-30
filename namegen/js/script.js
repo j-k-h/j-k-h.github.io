@@ -10,6 +10,24 @@ document.getElementById("adverb").innerHTML = fAdverb;
 document.getElementById("adjective").innerHTML = fAdjective;
 document.getElementById("noun").innerHTML = fNoun;
 
+function resetAdverb() {
+  fAdverb = adverb[random(100)];
+  document.getElementById("adverb").innerHTML = fAdverb;
+  return fAdverb;
+}
+
+function resetAdjective() {
+  fAdjective = adjective[random(100)];
+  document.getElementById("adjective").innerHTML = fAdjective;
+  return fAdjective;
+}
+
+function resetNoun() {
+  fNoun = noun[random(100)];
+  document.getElementById("noun").innerHTML = fNoun;
+  return fNoun;
+}
+
 const copyToClipboard = str => {
   const el = document.createElement('textarea');
   el.value = str;
@@ -30,6 +48,8 @@ const copyToClipboard = str => {
 
 function copy() {
   copyToClipboard(fAdverb + ' ' + fAdjective + ' ' + fNoun);
+  document.getElementById("copy").innerHTML = "copied!";
+  setTimeout(function() { document.getElementById("copy").innerHTML = "copy"; }, 1000);
 }
 
 function reroll() {

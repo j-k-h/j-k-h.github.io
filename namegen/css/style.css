@@ -36,6 +36,13 @@ html, body {
   font-family: "Oroban";
   font-style: italic;
   font-size: 6em;
+  transition: 0.125s linear;
+  cursor: pointer;
+  user-select: none;
+}
+
+.word:hover {
+  opacity: 0.4;
 }
 
 h1 {
@@ -44,6 +51,7 @@ h1 {
   line-height: .9em;
   font-weight: normal;
   display: inline;
+  transition: 0.125s linear;
 }
 
 a {
@@ -51,7 +59,7 @@ a {
 }
 
 a>h1:hover {
-  text-decoration: underline;
+  opacity: 0.4;
 }
 
 #copy, #reroll, #credit, #party, #normal {
