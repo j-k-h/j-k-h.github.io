@@ -6,12 +6,13 @@ html, body {
 
 @font-face {
   font-family: "Oroban";
-  src: url("Oroban-ElegansItalic.woff2") format("woff2"),
+  src: url("Oroban-ElegansItalic.woff2") format("woff2");
+  font-style: italic;
 }
 
 @font-face {
   font-family: "Surt";
-  src: url("Surt-Regular.woff2") format("woff2"),
+  src: url("Surt-Regular.woff2") format("woff2");
 }
 
 #wrapper {
@@ -31,8 +32,9 @@ html, body {
   align-items: center;
 }
 
-#adverb, #adjective, #noun {
+.word {
   font-family: "Oroban";
+  font-style: italic;
   font-size: 6em;
 }
 
@@ -69,13 +71,13 @@ a>h1:hover {
 
 #credit {
   bottom: 0;
-  left: 0;
+  right: 0;
   color: black;
 }
 
 #party, #normal {
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 
 #normal {
