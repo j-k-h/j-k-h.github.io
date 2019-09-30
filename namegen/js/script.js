@@ -32,6 +32,16 @@ function copy() {
   copyToClipboard(fAdverb + ' ' + fAdjective + ' ' + fNoun);
 }
 
+function reroll() {
+  fAdverb = adverb[random(100)];
+  fAdjective = adjective[random(100)];
+  fNoun = noun[random(100)];
+
+  document.getElementById("adverb").innerHTML = fAdverb;
+  document.getElementById("adjective").innerHTML = fAdjective;
+  document.getElementById("noun").innerHTML = fNoun;
+}
+
 function party() {
   document.getElementById("rainbowBG").style.display = "block";
   document.getElementById("wrapper").style.color = "white";
