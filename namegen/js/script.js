@@ -49,7 +49,7 @@ const copyToClipboard = str => {
 function copy() {
   copyToClipboard(fAdverb + ' ' + fAdjective + ' ' + fNoun);
   document.getElementById("copy").innerHTML = "copied!";
-  setTimeout(function() { document.getElementById("copy").innerHTML = "copy"; }, 1000);
+  setTimeout(function() { document.getElementById("copy").innerHTML = "copy (c)"; }, 1000);
 }
 
 function reroll() {
@@ -79,3 +79,15 @@ function normal() {
   document.getElementById("party").style.display = "block";
   document.getElementById("normal").style.display = "none";
 }
+
+window.addEventListener('keydown', function(e) {
+  if (e.keyCode == 67) {
+    copy();
+  }
+});
+
+window.addEventListener('keydown', function(e) {
+  if (e.keyCode == 82) {
+    reroll();
+  }
+});
