@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="207px" height="104px" viewBox="0 0 207 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>access-1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Microsite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-79.000000, -91.000000)" stroke="#000000">
+            <g id="access-1" transform="translate(80.000000, 92.000000)">
+                <path d="M102.5,102 C140.239458,102 174.406125,85 205,51 C174.406125,17 140.239458,0 102.5,0 C64.7605421,0 30.5938754,17 0,51 C30.5938754,85 64.7605421,102 102.5,102 Z" id="Oval"></path>
+                <circle id="Oval" cx="103" cy="51" r="29"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

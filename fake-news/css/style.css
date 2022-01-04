@@ -1,0 +1,49 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  font-family: "Suisse Int'l", sans-serif;
+  color: white;
+  cursor: none;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#left, #right {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+code, #breaking, #logo, #result {
+  display: none;
+}
+
+#prompt-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+::selection {
+  background-color: rgba(255, 255, 255, 0.99);
+  color: black;
+}

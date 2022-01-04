@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* border: 1px solid red; */
+}
+
+::selection {
+  background-color: rgba(0, 0, 255, 0.99);
+  color: white;
+}
+
+.article {
+  width: calc(50vw - 3em);
+  height: calc(100vh - 4em);
+  position: absolute;
+  overflow-y: scroll;
+  margin: 2em;
+  border: 1px solid black;
+}
+
+h1, h5, p, small {
+  padding: 0 10px;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: serif;
+  font-weight: normal;
+  line-height: 1em;
+  padding-bottom: 0.25em;
+}
+
+h3 {
+  font-weight: normal;
+  padding: 10px;
+}
+
+hr {
+  border: .5px solid black;
+}
+
+h5 {
+  padding-bottom: 2em;
+}
+
+p, li {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline;
+}
+
+a:hover {
+  color: blue;
+}
+
+img {
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.profile {
+  width: 30%;
+  height: 50%;
+  margin-right: 2em;
+  background-position: center;
+  background-size: cover;
+  float: left;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#persona1 {
+  background-image: url(https://images.unsplash.com/photo-1502764613149-7f1d229e230f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80);
+}
+
+#persona2 {
+  background-image: url(olman.jpg);
+}
+
+li {
+  list-style-type: none;
+}
+
+li::before {
+  content: "\2192   ";
+  padding-left: 1em;
+}
+
+#one {
+  top: 0;
+  left: 0;
+}
+
+#two {
+  top: 0;
+  right: 0;
+}
+
+#columns {
+  display: flex;
+}
+
+#row {
+  flex: 50%;
+}

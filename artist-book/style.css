@@ -1,0 +1,82 @@
+*, html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  background-color: #d2d2d2;
+}
+
+#wrapper {
+  height: 750px;
+  width: 750px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  height: 250px;
+  width: 250px;
+  background-color: black;
+}
+
+.circle {
+  border-radius: 500px;
+}
+
+.triangle {
+/*
+Randomize direction
+White stroke
+https://css-tricks.com/the-shapes-of-css/#triangle-top-left-shape
+*/
+}
+
+#instructions {
+  position: absolute;
+  display: block;
+  background-color: white;
+}
+
+#no-mobile {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@media print {
+  #wrapper {
+    height: 600px;
+    width: 600px;
+  }
+  .cell {
+    height: 200px;
+    width: 200px;
+  }
+
+  #instructions {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #no-mobile {
+    display: flex;
+  }
+
+  #wrapper, #instructions {
+    display: none;
+  }
+}

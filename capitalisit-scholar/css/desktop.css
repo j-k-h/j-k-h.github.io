@@ -1,0 +1,49 @@
+@media only screen and (min-width: 1020px) {
+  .images {
+    width: 60%;
+    right: 2em;
+  }
+
+  img:nth-child(2) {
+    display: none;
+  }
+
+  .reciept {
+    margin: 0;
+    width: calc(40% - 6.5em);
+  }
+
+  .text {
+    width: calc(40% - 4em);
+  }
+
+  #header {
+    position: sticky;
+    top: 2em;
+  }
+
+  h5 {
+    font-size: 1.3em;
+  }
+
+  #header h1 {
+    font-size: 3em;
+    width: 50%;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  #previous:active, #next:active {
+    background: none;
+  }
+
+  #help {
+    display: none;
+  }
+
+  #desktop-hint {
+    display: block;
+  }
+}

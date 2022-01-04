@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1360px" height="192px" viewBox="0 0 1360 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>range</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-3.33066907e-14%" y1="50%" x2="99.8046875%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FF6B3D" offset="0%"></stop>
+            <stop stop-color="#0873DC" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-40.000000, -1796.000000)">
+            <g id="range" transform="translate(40.000000, 1796.000000)">
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1360" height="192"></rect>
+                <rect id="Rectangle" fill="url(#linearGradient-1)" transform="translate(680.000000, 49.000000) rotate(-180.000000) translate(-680.000000, -49.000000) " x="2.27373675e-12" y="7" width="1360" height="84"></rect>
+                <text id="05-VERY-ANXIOUS" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="20" font-weight="bold" line-spacing="24" fill="#000000">
+                    <tspan x="1216" y="151">05</tspan>
+                    <tspan x="1246.14" y="154" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal"></tspan>
+                    <tspan x="1216.94" y="175.62" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal">VERY ANXIOUS</tspan>
+                </text>
+                <text id="04-A-LITTLE-ANXIOUS" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="20" font-weight="bold" line-spacing="24" fill="#000000">
+                    <tspan x="883" y="151">04</tspan>
+                    <tspan x="913.14" y="154" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal"></tspan>
+                    <tspan x="883.94" y="175.62" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal">A LITTLE ANXIOUS</tspan>
+                </text>
+                <text id="03-INDIFFERENT" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="20" font-weight="bold" line-spacing="24" fill="#000000">
+                    <tspan x="614" y="151">03</tspan>
+                    <tspan x="644.14" y="154" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal"></tspan>
+                    <tspan x="614.94" y="175.62" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal">INDIFFERENT</tspan>
+                </text>
+                <text id="02-PRETTY-GOOD" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="20" font-weight="bold" line-spacing="24" fill="#000000">
+                    <tspan x="301" y="151">02</tspan>
+                    <tspan x="301.94" y="175.62" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal">PRETTY GOOD</tspan>
+                </text>
+                <text id="01-VERY-GREAT" font-family="IBMPlexMono-Bold, IBM Plex Mono" font-size="20" font-weight="bold" line-spacing="24" fill="#000000">
+                    <tspan x="0" y="151">01</tspan>
+                    <tspan x="30.14" y="154" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal"></tspan>
+                    <tspan x="0.94" y="175.62" font-family="IBMPlexMono, IBM Plex Mono" font-weight="normal">VERY GREAT</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

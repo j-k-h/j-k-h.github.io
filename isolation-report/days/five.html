@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Community Isolation Report</title>
+  <link rel="stylesheet" href="../assets/style.css" type="text/css">
+  <link rel="stylesheet" href="https://use.typekit.net/kja3igy.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <script>
+    var nextDay = "six.html";
+    var prevDay = "four.html";
+    var anxietyLevel = 3.1;
+   </script>
+</head>
+
+<body>
+  <div id="header">
+    <div id="main-links">
+      <a href="../index.html"><img src="../assets/img/logo.svg" id="logo"/></a>
+      <img src="../assets/img/menu.svg" width="20em" id="menu" onclick="nav()"/>
+    </div>
+  </div>
+  <div id="nav-links">
+    <div>
+      <h4>Table of contents</h4>
+      <ul>
+        <li><a href="../index.html">Introduction</a></li>
+      </ul>
+      <ul>
+        <li><a href="one.html">Day 01 (April 04)</a></li>
+        <li><a href="two.html">Day 02 (April 05)</a></li>
+        <li><a href="three.html">Day 03 (April 06)</a></li>
+        <li><a href="four.html">Day 04 (April 07)</a></li>
+        <li><a href="five.html">Day 05 (April 08)</a></li>
+        <li><a href="six.html">Day 06 (April 09)</a></li>
+        <li><a href="seven.html">Day 07 (April 10)</a></li>
+        <li><a href="eight.html">Day 08 (April 11)</a></li>
+        <li><a href="nine.html">Day 09 (April 12)</a></li>
+        <li><a href="ten.html">Day 10 (April 13)</a></li>
+        <li><a href="eleven.html">Day 11 (April 14)</a></li>
+        <li><a href="twelve.html">Day 12 (April 15)</a></li>
+        <li><a href="thirteen.html">Day 13 (April 16)</a></li>
+        <li><a href="fourteen.html">Day 14 (April 17)</a></li>
+        <li><a href="fifteen.html">Day 15 (April 18)</a></li>
+      </ul>
+      <ul>
+        <li><a href="../conclusion.html">Conclusion</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="wrapper">
+    <div id="date-start">
+      <h2>April 8, 2020</h2>
+      <h2 class="nav"><a onclick="window.location.href = prevDay">Previous day</a> / <a onclick="window.location.href = nextDay">Next day</a></h2>
+    </div>
+    <div id="day">
+      <div id="anxiety-txt">
+        <h4>Average anxiety level:</h4>
+        <h1 id="anxietyLevel">0.0</h1>
+      </div>
+      <div id="anxiety-chart">
+        <img src="../assets/img/charts/chart-5.svg"/>
+      </div>
+      <div id="headline">
+        <h4>Today's headline:</h4>
+        <h1><a href="https://www.nytimes.com/2020/04/08/us/politics/bernie-sanders-drops-out.html">Bernie Sanders Drops Out of 2020 Democratic Race for President</a></h1>
+      </div>
+      <div id="nasdaq">
+        <h4>Nasdaq:</h4>
+        <h3>8,090.90 <span id="up">203.64 (2.58%)</span></h3>
+      </div>
+      <div id="obit">
+        <h4>Obituary:</h4>
+        <img src="../assets/img/obit/five.jpg" width="130em"/>
+        <h1><a href="https://www.nytimes.com/2020/04/08/us/politics/linda-tripp-dead.html">Linda Tripp, Key Figure in Clinton Impeachment, Dies at 70</a></h1>
+      </div>
+      <div id="weather">
+        <h4>Local Weather:</h4>
+        <div id="weather-grid">
+        <div id="div1"><img src="../assets/img/weather/cloudy.png" width="130em"/></div>
+        <div id="div2">
+          <h3>Scattered clouds</h3>
+          <h3 id="weather-desc">70 / 64 °F</h3>
+        </div>
+        </div>
+      </div>
+      <div id="twitter">
+        <h4>TRENDING TWEET:</h4>
+        <h1 id="tweet"><q>Some people who voted today in Wisconsin will die from #coronavirus and that is okay by Republicans and the Supreme Court.</q></h1>
+        <h2><a href="https://twitter.com/B52Malmet" target="_blank" style="text-decoration: none"> <img src="../assets/img/twitter.svg" id="twitter-icon"/>Barbara Malmet (@B52Malmet)</a></h2>
+      </div>
+    </div>
+    <div id="date-end">
+      <h2></h2>
+      <h2 class="nav"><a onclick="window.location.href = prevDay">Previous day</a> / <a onclick="window.location.href = nextDay">Next day</a></h2>
+    </div>
+  </div>
+  <div id="footer">
+    Made with <3 by <a href="https://www.jkh.design/" target="_blank">jkh.design</a>
+  </div>
+  <script src="../assets/motion.js"></script>
+  <script src="../assets/countUp.js"></script>
+  <script>
+    fadeIn();
+  </script>
+</body>
+
+</html>

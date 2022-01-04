@@ -1,0 +1,41 @@
+People in poverty, people who aren't receiving the funding that they need.
+
+Specifically target the delegates -> an app to get them to recruit people specifically. 
+
+Focus on what money would go where.
+
+Rewards for participating in the census -> receiving money from the gov't indirectly.
+
+TALK ABOUT REPRESENTATION
+
+A site that's based on getting people to share it?
+
+-----
+
+2 personas are two people (vastly different, most likely) who would be delegates for their communities to encourage people to participate in the 2020 census. 
+
+Main problem: The government does not have an accurate understanding of the demographics of Detroit which therefore would provide more adequate funding for the city.
+- Audience: people of Detroit, delegates specifically
+
+-----
+
+LIST OF DESIGN COMPONENTS/MEDIA:
+Dynamic
+- website
+- computer application
+- mobile website
+- mobile application
+- social media campaign
+- kiosk application
+- video/motion piece
+	- projector
+	- billboard
+	- digital screen
+
+Static
+- poster
+- book
+- flyer
+- pamphlet
+- billboard
+- bus ad

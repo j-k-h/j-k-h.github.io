@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Artist Book</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body onload="generateComp()">
+  <div id="wrapper">
+    <div class="cell" id="c1"></div>
+    <div class="cell" id="c2"></div>
+    <div class="cell" id="c3"></div>
+    <div class="cell" id="c4"></div>
+    <div class="cell" id="c5"></div>
+    <div class="cell" id="c6"></div>
+    <div class="cell" id="c7"></div>
+    <div class="cell" id="c8"></div>
+    <div class="cell" id="c9"></div>
+  </div>
+  <div id="instructions">
+    <p><b>[R]</b> generate a new composition</p>
+    <p><b>[P]</b> print composition</p>
+    <p><b>[&#8593;]</b> increase the number of colors (max 9)</p>
+    <p><b>[&#8595;]</b> decrease the number of colors (min 2)</p>
+    <p><b>[C]</b> toggle circles</p>
+    <p><b>[T]</b> toggle squares</p>
+    <br />
+    <p><b>[I]</b> toggle this dialog</p>
+  </div>
+
+  <div id="no-mobile">
+    <p>You must be at least <b>750px</b> wide to play.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

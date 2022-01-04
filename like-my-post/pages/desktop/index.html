@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>desktop experience</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="../../css/style.css" type="text/css">
+  <link rel="stylesheet" href="../../css/desktop.css" type="text/css">
+</head>
+
+<body>
+  <div id="desktop">
+    <div id="progress-bar">
+    </div>
+    <div>
+      <h2 id="p1"><a href=../../index.html>likemypost.xyz</a></h2>
+      <h2 id="p2">0% complete</h2>
+      <h2 id="p5"><a href="../about.html">?</a></h2>
+    </div>
+    <div class="post">
+      <input id="input" type="text" placeholder="create your post..." autofocus />
+    </div>
+    <div>
+      <h2 id="p3">this is your post</h2>
+      <h2 id="p4">press enter to confirm</h2>
+    </div>
+  </div>
+  <script>
+    $(document).keydown(function(e) {
+      if (e.which == 13) {
+        window.location = "desktop-2.html?post=" + input.value;
+        return false;
+      }
+    });
+  </script>
+</body>
+
+</html>

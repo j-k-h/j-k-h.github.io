@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="319px" height="125px" viewBox="0 0 319 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>chart-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="49.9023437%" y1="99.9023437%" x2="49.9023437%" y2="0.09765625%" id="linearGradient-1">
+            <stop stop-color="#FF6B3D" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#FF6B3D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="99.8046875%" y1="50%" x2="-4.4408921e-14%" y2="50%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="chart-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="319" height="125"></rect>
+        <polygon id="chart" fill="url(#linearGradient-1)" points="302 31 349.5 19 397 25.0515373 397 104 302 104"></polygon>
+        <rect id="right-bearing" fill="url(#linearGradient-2)" x="305" y="0" width="14" height="105"></rect>
+        <rect id="left-bearing" fill="url(#linearGradient-2)" transform="translate(51.000000, 52.500000) scale(-1, 1) translate(-51.000000, -52.500000) " x="44" y="0" width="14" height="105"></rect>
+        <g id="Group" transform="translate(1.000000, 0.000000)">
+            <g id="chart-bg">
+                <g id="Group-2" transform="translate(33.000000, 6.000000)" opacity="0.5" stroke="#000000" stroke-linecap="square" stroke-width="0.5">
+                    <line x1="4.08695652" y1="61.5" x2="7.91304348" y2="61.5" id="Line-2-Copy-5"></line>
+                    <line x1="0.173913043" y1="49.5" x2="7.82608696" y2="49.5" id="Line-2-Copy-6"></line>
+                    <line x1="4.08695652" y1="37.5" x2="7.91304348" y2="37.5" id="Line-2-Copy-7"></line>
+                    <line x1="0.173913043" y1="25.5" x2="7.82608696" y2="25.5" id="Line-2-Copy-8"></line>
+                    <line x1="4.08695652" y1="13.5" x2="7.91304348" y2="13.5" id="Line-2-Copy-9"></line>
+                    <line x1="0.173913043" y1="1.5" x2="7.82608696" y2="1.5" id="Line-2-Copy-10"></line>
+                </g>
+                <g id="Group-2-Copy" transform="translate(37.000000, 95.500000) scale(1, -1) translate(-37.000000, -95.500000) translate(33.000000, 88.000000)" opacity="0.5" stroke="#000000" stroke-linecap="square" stroke-width="0.5">
+                    <line x1="4.08695652" y1="13.5" x2="7.91304348" y2="13.5" id="Line-2-Copy-5"></line>
+                    <line x1="0.173913043" y1="1.5" x2="7.82608696" y2="1.5" id="Line-2-Copy-6"></line>
+                </g>
+                <text id="3.0" font-family="IBMPlexMono, IBM Plex Mono" font-size="15" font-weight="normal" fill="#000000">
+                    <tspan x="0" y="84">3.0</tspan>
+                </text>
+                <line x1="54.5" y1="1.5" x2="54.5" y2="103.5" id="Line-3" stroke="#000000" stroke-width="0.5" stroke-linecap="square"></line>
+                <line x1="178" y1="1.5" x2="178" y2="103.5" id="Line-3-Copy" stroke="#000000" stroke-width="0.5" stroke-linecap="square"></line>
+                <line x1="301" y1="1.5" x2="301" y2="103.5" id="Line-3-Copy-2" stroke="#000000" stroke-width="0.5" stroke-linecap="square"></line>
+                <text id="2-DAYS-AGO-→" font-family="IBMPlexMono, IBM Plex Mono" font-size="8" font-weight="normal" fill="#000000">
+                    <tspan x="31" y="119">2 DAYS AGO →</tspan>
+                </text>
+                <line x1="30.4043478" y1="78.5" x2="312.5" y2="78.5" id="Line-Copy-2" stroke="#000000" stroke-linecap="square"></line>
+            </g>
+            <text id="1-DAY-AGO-→" font-family="IBMPlexMono, IBM Plex Mono" font-size="8" font-weight="normal" fill="#000000">
+                <tspan x="156" y="119">1 DAY AGO →</tspan>
+            </text>
+            <text id="TODAY" font-family="IBMPlexMono, IBM Plex Mono" font-size="8" font-weight="normal" fill="#000000">
+                <tspan x="289" y="119">TODAY</tspan>
+            </text>
+        </g>
+        <circle id="Oval" fill="#000000" cx="302" cy="31" r="2"></circle>
+    </g>
+</svg>

@@ -1,0 +1,1 @@
+/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --kiosk-printing --app=file:///Users/joshkh/Documents/GitHub/fake-news/index.html

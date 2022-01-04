@@ -1,0 +1,4 @@
+# The Community Isolation Report
+This report is a response to the ongoing Coronavirus pandemic and Executive Order 2020-42 (commonly known as Michigan’s ‘Stay at Home’ order). COVID-19, which has flaunted staggering numbers and dangerous repercussions, has affected our lives on a macro level. We no longer see the people we love, have access to the things we need, and in many cases, lack the wellbeing and safety we’ve grown accustomed to. We have more of a reason to be anxious than ever, and with forced isolation, these circumstances are exacerbated.
+
+The Community Isolation Report is a collection of 440 responses over the course of 15 days. It recruited Detroit-natives, Livonia transplants, Gross Ile island-dwellers, and lots of people in-between who answered one question every day: “how are you feeling?” Participants were asked to rate their anxiety on a scale of 1 to 5.

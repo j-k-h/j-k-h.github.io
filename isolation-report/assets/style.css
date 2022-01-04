@@ -1,0 +1,397 @@
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-family: Georgia, serif;
+  padding: 0.8em 0;
+}
+
+h1 {
+  font-family: poynter-oldstyle-display-nar, serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+h4 {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 1em 0;
+  border-top: 1px solid black;
+}
+
+a {
+  color: black;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+a:hover, #menu:hover {
+  opacity: 0.4;
+}
+
+.mono {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  padding: 0 0.25em;
+}
+
+#header {
+  font-size: 1em;
+  width: calc(100% - 6em);
+  background-color: white;
+  box-shadow: 0px 5px 40px 0px rgba(0,0,0,0.25);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1.5em 3em;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+#header > #main-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  font-size: 1em;
+  width: 30rem;
+}
+
+#menu {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#nav-links {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  height: 100vh;
+  transition: right 0.5s ease;
+  width: 30%;
+  position: fixed;
+  top: 0;
+  right: -30%;
+  background-color: white;
+  box-shadow: 0px 5px 40px 0px rgba(0,0,0,0.25);
+  z-index: 4;
+}
+
+#nav-links > div {
+  margin-top: 8em;
+  margin-left: 2em;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 0.5em;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+  transition: 0.2s;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+li:before {
+  content: url(img/bullet.svg);
+  width: 0.25em;
+  padding-right: 5px;
+}
+
+li:hover {
+  text-indent: 0;
+}
+
+#hero {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 7em;
+  background-image: radial-gradient(circle, #FF6B3D 0%, #0873DC 100%);
+	background-size: 100% 500%;
+	animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 0 30%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
+#hero > h1 {
+  font-size: 7em;
+  font-family: poynter-oldstyle-display-nar, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#sticker {
+  width: 12em;
+  position: absolute;
+  right: 5em;
+  bottom: 4em;
+  z-index: 3;
+}
+
+#wrapper {
+  width: 70vw;
+  margin: 8em auto;
+}
+
+#wrapper, #hero {
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.outdent {
+  margin-left: -8vw;
+  width: 86vw;
+  padding: 4rem 0;
+}
+
+#date-start {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 4em 0 0.5em 0;
+  border-bottom: 1px solid black;
+}
+
+#holiday {
+  font-size: 1rem;
+}
+
+#date-end {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 0.5em;
+  border-top: 1px solid black;
+}
+
+.nav {
+  font-size: 1rem;
+  align-self: end;
+  justify-self: end;
+}
+
+.nav > a {
+  text-decoration: none;
+}
+
+h2.nav::before {
+  content: "\2190";
+  padding-right: 0.3em;
+  font-size: 1.3em;
+}
+
+h2.nav::after {
+  content: "\2192";
+  padding-left: 0.3em;
+  font-size: 1.3em;
+}
+
+#day {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 2em;
+  grid-row-gap: 1em;
+}
+
+#day > div {
+  padding-bottom: 2em;
+}
+
+#anxiety-txt {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+#anxiety-txt > h1 {
+  font-size: 20vw;
+  line-height: 0.9;
+  font-family: poynter-oldstyle-display-nar, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#anxiety-txt > h4 {
+  border-top: none !important;
+}
+
+#anxiety-chart {
+  grid-area: 1 / 3 / 2 / 6;
+  align-self: end;
+}
+
+#anxiety-chart > img {
+  width: 100%;
+}
+
+#headline {
+  grid-area: 2 / 1 / 3 / 6;
+}
+
+#nasdaq {
+  grid-area: 3 / 1 / 4 / 4;
+}
+
+#up, #down, #closed, #weather-desc {
+  font-size: 1.5rem;
+}
+
+#closed, #weather-desc {
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+#down {
+  color: #FF6B3D;
+}
+
+#up {
+  color: #2cc144;
+}
+
+#up::before {
+  content: "\2191";
+  padding-right: 0.25em;
+}
+
+#down::before {
+  content: "\2193"
+  padding-right: 0.25em;
+}
+
+#weather {
+  grid-area: 4 / 1 / 5 / 4;
+}
+
+#weather-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+#weather-grid > #div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 1em 1em 0 0;
+}
+
+#weather-grid > #div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: center;
+}
+
+#weather-desc {
+  padding-top: 0.25em;
+}
+
+#obit {
+  grid-area: 3 / 4 / 5 / 6;
+  font-size: 0.7rem;
+}
+
+#obit > img {
+  width: 40%;
+  border-radius: 100%;
+  padding-bottom: 1em;
+}
+
+#twitter {
+  grid-area: 5 / 1 / 6 / 6;
+  margin-bottom: 2em;
+}
+
+#tweet {
+  font-family: poynter-oldstyle-display-nar, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  text-indent: -0.3em;
+  padding-bottom: 1rem;
+}
+
+#twitter > h2 {
+  font-size: 1.3em;
+  text-align: right;
+}
+
+#twitter-icon {
+  width: 1em;
+  padding-right: 0.5em;
+  transform: translateY(3px);
+}
+
+#footer {
+  font-family: ibm-plex-mono, sans-serif;
+  font-weight: 400;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  padding: 1em 0;
+  text-align: center;
+  width: 100%;
+  background-color: #ebebeb;
+}
+
+::selection {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.99);
+}
+
+.i {
+  color: white;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+@media only screen and (max-width: 1100px) {
+  #date-start, #date-end, #day {
+    display: block;
+  }
+
+  #anxiety-txt > h1 {
+    font-size: 70vw;
+  }
+}

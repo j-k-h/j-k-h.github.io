@@ -1,0 +1,19 @@
+@media only screen and (max-width: 500px) {
+  #about {
+    font-size: 0.6em;
+    width: 90%;
+  }
+}
+
+#about {
+  width: 80%;
+}
+
+#p5 {
+  top: 0.5em;
+  right: 0.5em;
+}
+
+#links {
+  font-size: 0.5em;
+}

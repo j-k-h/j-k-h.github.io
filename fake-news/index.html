@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <title>newsgen v1.0</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <img src="img/start.gif" height="60%"/>
+  </div>
+  <h2 id="prompt-bottom">Press either button to begin</h2>
+  <script>
+  window.addEventListener('keyup', function(e) {
+    if (e.keyCode == 37 || e.keyCode == 39) {
+      window.location.href = "pages/1.html";
+    } else if (e.keyCode == 38) {
+      openFullscreen();
+    }
+  });
+  </script>
+</body>
+
+</html>

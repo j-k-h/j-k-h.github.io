@@ -1,0 +1,55 @@
+#title {
+  line-height: 1.2em;
+}
+
+#title-num {
+  font-size: 10em;
+  line-height: .95em;
+  word-break: break-all;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#outro {
+  font-size: 5em;
+  line-height: .95em;
+  word-break: break-all;
+  overflow: hidden;
+  float:none;
+}
+
+@media only screen and (max-width: 360px) {
+  #title-num {
+    font-size: 10em;
+  }
+}
+
+#title-sub {
+  padding-top: 1em;
+}
+
+#nav-hint {
+  display: block;
+}
+
+@media only screen and (min-width: 1020px) {
+  #title {
+    font-size: 4em;
+    width: 50%;
+  }
+
+  #title-sub {
+    font-size: 1.5em;
+  }
+
+  #title-num, #outro {
+    font-size: 16em;
+  }
+
+  #intro {
+    font-size: 2em;
+    width: 50%;
+  }
+}

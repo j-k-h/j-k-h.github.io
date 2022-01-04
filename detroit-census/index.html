@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--
+ACCESSIBILITY:
++ color contrast meets standards for color-blind users
++ alt text is provided on images
++ access keys link to pages in intuitively
++ tab index directs user to header menu first
+ -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DETROITDOTHECENSUS2020</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <a href="#" accesskey="0" tabindex="0">DETROITDOTHECENSUS2020.COM</a>
+      <div id="header-right">
+        <a href="pages/prepare.html" accesskey="1">PREPARE</a>
+        <a href="pages/share.html" accesskey="2">SHARE</a>
+        <a href="pages/shop.html" accesskey="3">SHOP</a>
+      </div>
+      <a href="menu.html"><img src="assets/svg/menu.svg" id="menu"/></a>
+    </div>
+    <div id="title">
+      <div id="title-content">
+        <a href="#"><img id="logo" src="assets/svg/logo-color.svg" width="80%" alt="detroit census logo" /></a>
+        <p>The outcome of the 2020 census in Detroit will determine the success of our city for the next 10 years. <br /><br />In 2010, it’s estimated that roughly 27,000 households did not complete the census, depriving Detroit of crucial funding. We can’t afford to make the same mistake twice.</p>
+      </div>
+    </div>
+    <div id="buttons">
+      <a href="pages/prepare.html" id="prepare" class="button"><span class="number">1</span>
+        <h2>PREPARE<br />FOR THE<br />CENSUS</h2>
+      </a>
+      <a href="pages/share.html" id="share" class="button"><span class="number">2</span>
+        <h2>SHARE<br />WITH<br />OTHERS</h2>
+      </a>
+      <a href="pages/shop.html" id="shop" class="button"><span class="number">3</span>
+        <h2>REP<br />THE<br />BRAND</h2>
+      </a>
+    </div>
+    <div id="info-bar">
+      <p id="info-message"><b>This website is print-friendly!</b> Print any page to share with friends & family!</p>
+      <p id="info-confirm">OK</p>
+    </div>
+  </div>
+
+<!-- PRINTED PAGE -->
+  <div id="print">
+    <div>
+      <img id="logo" src="assets/svg/logo-bw.svg" width="50%" />
+    </div>
+    <div id="print-middle">
+      <div id="info"><div><p>The outcome of the 2020 census in Detroit will determine the success of our city for the next 10 years. <br /><br />In 2010, it’s estimated that roughly 27,000 households did not complete the census, depriving Detroit of crucial funding. We can’t afford to make the same mistake twice.</p></div></div>
+      <div id="dates">
+        <div>
+        <h4>DATES TO REMEMBER:</h4>
+        <p><b>March 23</b> Self-registration starts<br />
+        <b>April 01</b> Census day</p><br /><br />
+        <h4>REGISTER AT:</h4>
+        <p>Starting March 23, you can log onto www.census.gov to start your census ONLINE for the first time in U.S. history!</p>
+        </div>
+      </div>
+    </div>
+    <div id="print-bottom">
+      <div><h4>DETROIT<br />DOTHECENSUS<br />2020.COM</h4></div>
+      <div id="center-x"><h4>&times;</h4></div>
+      <div><img src="assets/svg/census-logo.jpg" height="60em"/></Div>
+    </div>
+    <div id="print-footer">
+      <h5 style="float: left;">PRINT # %NUM%</h5><h5 style="float: right;">by user %USER% on %DATE%</h5>
+    </div>
+  </div>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

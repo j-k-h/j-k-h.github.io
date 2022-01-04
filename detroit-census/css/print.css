@@ -1,0 +1,64 @@
+#print {
+  display: none;
+  height: 100%;
+  background-color: white;
+}
+
+#print > div {
+  height: 32%;
+  width: 100%;
+}
+
+#print-middle {
+  display: flex;
+}
+
+#print-middle > div {
+  width: 50%;
+  height: 100%;
+  border-color: black;
+  font-size: .8em;
+}
+
+#info {
+  border-right: none;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+}
+
+#info > div, #dates > div {
+  margin: 1em;
+}
+
+#dates {
+  border-width: 1px;
+  border-style: dashed;
+}
+
+#print-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+#print-footer {
+  display: absolute;
+  bottom: 0;
+  height: 0 !important;
+}
+
+#center-x {
+  padding: 2rem;
+}
+
+@media print {
+  #wrapper, #micro-wrapper {
+    display: none;
+  }
+
+  #print {
+    display: block;
+  }
+}

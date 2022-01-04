@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="109px" viewBox="0 0 210 109" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>access-3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="176" height="107" rx="10"></rect>
+    </defs>
+    <g id="Microsite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons" transform="translate(-345.000000, -89.000000)">
+            <g id="access-3" transform="translate(346.000000, 90.000000)">
+                <g id="Group-2">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <g mask="url(#mask-2)" stroke="#000000">
+                        <g transform="translate(-13.000000, 10.000000)">
+                            <rect id="Rectangle" transform="translate(132.831998, 105.831998) rotate(-315.000000) translate(-132.831998, -105.831998) " x="81.3319985" y="54.3319985" width="103" height="103"></rect>
+                            <rect id="Rectangle-Copy-4" transform="translate(72.831998, 122.831998) rotate(-315.000000) translate(-72.831998, -122.831998) " x="21.3319985" y="71.3319985" width="103" height="103"></rect>
+                            <circle id="Oval" cx="83" cy="18" r="18"></circle>
+                        </g>
+                    </g>
+                </g>
+                <path d="M176,16 L143,16 L143,36 L176,36 L176,97 C176,102.522847 171.522847,107 166,107 L10,107 C4.4771525,107 6.76353751e-16,102.522847 0,97 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 L166,0 C171.522847,-1.01453063e-15 176,4.4771525 176,10 L176,16 Z" id="Combined-Shape" stroke="#000000"></path>
+                <rect id="Rectangle" stroke="#000000" x="143" y="16" width="65" height="20"></rect>
+                <text id="SCENERY" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="12" font-weight="bold" fill="#000000">
+                    <tspan x="146.826" y="30.5">SCENERY</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
