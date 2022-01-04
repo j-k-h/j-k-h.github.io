@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Medium is the message</title>
+  <link rel="stylesheet" href="../../src/style.css" type="text/css">
+  <style>
+    #codex-nav {
+      font-size: 1.1em;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      text-indent: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      cursor: default;
+    }
+
+    #codex-nav svg {
+      transform: translateY(5px);
+    }
+
+    #codex-toc {
+      height: 400px;
+      text-indent: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #codex-title {
+      font-size: 2em;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    #codex-subtitle {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body class="subpage">
+  <div class="medium-info">
+    <h1 class="medium-title">Codex</h1>
+    <p class="medium-intro">The Codex (commonly referred to as the book) takes information and segments it into multiple linked pages, much like the <span class="similar">Website</span> medium. Like the <span class="similar">Scroll</span> its content
+      is static and limited only to text and image.</p>
+    <table>
+      <tr>
+        <td>Length</td>
+        <td>Finite</td>
+      </tr>
+      <tr>
+        <td>Experience</td>
+        <td>Linear, Segmented</td>
+      </tr>
+      <tr>
+        <td>Realm</td>
+        <td>Physical</td>
+      </tr>
+      <tr>
+        <td>Example</td>
+        <td class="example">
+          <p>Don Quixote</p>
+          <div class="image-element">
+            <img src="../../src/img/donquixote.png" />
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="medium-article">
+    <p class="article-title">A book and much more (transcript)</p>
+    <p class="caption">by Christopher Kenneally <a href="https://beyondthebookcast.com/" target="_blank">Beyond the Book</a></p>
+    <hr /><br />
+    <div id="codex-toc">
+      <p id="codex-title">A book and much more</p>
+      <p id="codex-subtitle">Interview of Amaranth Borsuk by Christopher Kenneally</p>
+    </div>
+    <div id="codex-nav">
+      <a href="#" style="cursor: w-resize">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="0" height="0" opacity="0" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="pg-left">
+              <rect id="Rectangle-Copy-9" fill="#b5b5b5" x="0" y="0" width="27" height="27"></rect>
+              <polygon fill="#FFFFFF" transform="translate(13.500000, 13.500000) rotate(-180.000000) translate(-13.500000, -13.500000) " points="4.26325641e-14 0 27 27 4.26325641e-14 27"></polygon>
+            </g>
+          </g>
+        </svg>
+      </a>
+      <a href="codex-2.html" style="cursor: e-resize">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="pg-right">
+              <rect id="Rectangle" fill="#b5b5b5" x="0" y="0" width="27" height="27"></rect>
+              <polygon fill="#FFFFFF" transform="translate(13.500000, 13.500000) rotate(-270.000000) translate(-13.500000, -13.500000) " points="1.98951966e-13 2.27373675e-13 27 27 1.98951966e-13 27"></polygon>
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <script src="../../src/scripts.js"></script>
+</body>

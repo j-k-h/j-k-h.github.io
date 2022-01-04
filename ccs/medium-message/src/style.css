@@ -1,0 +1,303 @@
+/* NORMALIZE */
+*, html {
+  padding: 0;
+  margin: 0;
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Suisse Works";
+  src: url("fonts//SuisseWorks-Regular-WebXL.woff2") format("woff2"),
+       url("fonts//SuisseWorks-Regular-WebXL.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suisse Works";
+  src: url("fonts//SuisseWorks-RegularItalic-WebXL.woff2") format("woff2"),
+       url("fonts//SuisseWorks-RegularItalic-WebXL.woff") format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("fonts//SuisseIntl-Regular-WebM.woff2") format("woff2"),
+       url("fonts//SuisseIntl-Regular-WebM.woff") format("woff");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url("fonts//SuisseIntl-RegularItalic-WebM.woff2") format("woff2"),
+       url("fonts//SuisseIntl-RegularItalic-WebM.woff") format("woff");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Suisse Mono";
+  src: url("fonts//SuisseIntlMono-Regular-WebS.woff2") format("woff2"),
+       url("fonts//SuisseIntlMono-Regular-WebS.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Suisse Mono";
+  src: url("fonts//SuisseIntlMono-Bold-WebS.woff2") format("woff2"),
+       url("fonts//SuisseIntlMono-Bold-WebS.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* SECTIONS */
+body {
+  font-family: "Suisse Works", serif;
+}
+
+p {
+}
+
+img {
+  width: 100%;
+  margin: 0.5em 0;
+}
+
+hr {
+	height:1px;
+	border:none;
+  color: black;
+  background: black;
+}
+
+a {
+  font-family: "Suisse Int'l", sans-serif;
+  color: black;
+  cursor: ne-resize;
+  text-transform: none !important;
+}
+
+a:hover {
+  color: #0057ff;
+}
+
+.similar {
+  background-color: black;
+  color: white;
+  border-radius: 500px;
+  padding: 0 0.5em;
+}
+
+.article-title {
+  font-family: "Suisse Int'l", sans-serif;
+  font-size: 1.3em;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+#wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.subpage {
+  padding: 1em;
+  margin-bottom: 1em;
+  overflow-y: hidden;
+}
+
+.medium {
+  width: 20%;
+  min-width: 15%;
+  height: 100vh;
+  background-color: #e0e0e0;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.medium-info {
+  height: 35vh;
+}
+
+.medium-title {
+  border: 1px solid black;
+  border-radius: 500px;
+  padding-left: 0.3em;
+}
+
+#scroll, #webpage, #feed {
+  background-color: white;
+}
+
+.medium-intro {
+  margin: 1rem 0 0.5rem 2rem;
+  font-style: italic;
+}
+
+.medium-article {
+  overflow-y: scroll;
+  text-indent: 2rem;
+  position: relative;
+  border-top: 2px solid black;
+  max-height: calc(65vh - 2em);
+  padding-bottom: 1em;
+}
+
+.top-gradient-container {
+  position: sticky;
+  top: 0;
+  pointer-events: none;
+}
+
+.top-gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(180deg, #fff 0%, rgba(255,255,255,0) 100%);
+}
+
+.bottom-gradient-container {
+  position: sticky;
+  bottom: -1em;
+  pointer-events: none;
+}
+
+.bottom-gradient {
+  position: absolute;
+  bottom: -1em;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(0, #fff 0%, rgba(255,255,255,0) 100%);
+}
+
+.caption {
+  font-family: "Suisse Mono", monospace;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-indent: 0;
+  font-size: 0.7em;
+  margin-bottom: 1em;
+}
+
+.handle {
+  width: 0.5em;
+  background-color: black;
+  color: white;
+  cursor: col-resize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  z-index: 10;
+}
+
+table {
+  font-family: "Suisse Mono", monospace;
+  font-weight: bold;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  width: calc(100% - 2rem);
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+td:last-child {
+  color: grey;
+}
+
+tr:last-child td {
+  padding-top: 1em;
+}
+
+.example {
+  text-decoration: underline;
+  cursor: default;
+}
+
+.image-element {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  width: calc(100% - 2em);
+  left: 1em;
+}
+
+.visible {
+  display: block;
+}
+
+table td, table td * {
+    vertical-align: top;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.99);
+  color: white;
+}
+
+#no-mobile {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: none;
+}
+
+#no-mobile p {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media only screen and (max-width: 315px) {
+  p {
+    font-size: 0.8em;
+  }
+
+  .caption, table {
+    font-size: 0.5em;
+  }
+
+ h1 {
+    font-size: 1.5em;
+  }
+
+  .article-title, #book-content {
+    font-size: 1em !important;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  p {
+    font-size: 1.2em;
+  }
+  .article-title {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 1150px), (max-height: 800px){
+  #no-mobile {
+    display: flex;
+  }
+
+  #intro, #wrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Scroll to feed and back again</title>
+  <link rel="stylesheet" href="src/style.css" type="text/css">
+  <style>
+  #intro {
+    height: 100vh;
+    width: 100vw;
+    background-color: lemonchiffon;
+  }
+
+  #intro-info {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 1rem;
+    text-indent: 0;
+    position: absolute;
+    bottom: 0;
+  }
+
+  #intro img {
+    width: 30%;
+    mix-blend-mode: darken;
+  }
+
+  #intro h1 {
+    padding: 1rem;
+    font-size: 10vw;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+  }
+
+  #intro p {
+    font-family: "Suisse Int'l", sans-serif;
+    font-size: 2em;
+  }
+
+  #byline {
+    font-size: 1rem;
+  }
+
+  #hint {
+    font-family: "Suisse Works", serif !important;
+    animation: bob 2s ease infinite;
+    position: absolute;
+  }
+
+  @keyframes bob {
+    0%, 100% {
+      bottom: 1rem;
+    }
+    50% {
+      bottom: 2rem;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <div id="intro">
+    <h1>Scroll to feed<br />and back again</h1>
+    <div id="intro-info">
+      <div>
+        <img src="src/img/stairs.gif"/>
+        <p id="hint">&darr;</p>
+      </div>
+      <p>As technology has progressed, humans have defined and redefined the publication experience. Once hieroglyphs on clay tablets, now dynamic interfaces on Kindles and iPads, history has a way of repeating itself. The translation of papyrus scrolls to a &ldquo;scrolling&rdquo; webpage saw a similar evolution as well, proving that while we continue to innovate and upgrade, familiarity serves us well.<br /><br />
+
+      This microsite is an experiment of this concept, an exploration of how we read what we read. By investigating five different &quot;content-heavy&quot; channels and abstracting them to their most crucial elements, differences and similarities between each begin to reveal themselves. "Scroll" down to read five texts that challenge the form of their corresponding medium.<br />
+      <span id="byline">by <a href="https://jkh.design" target="_blank">Josh Krauth-Harding</a> for Publication Design. Illustration <a href="https://rafaeldearaujo.tumblr.com/">Rafael Araujo</a>.</span></p>
+    </div>
+  </div>
+  <div id="wrapper">
+    <div class="medium" id="scroll">
+      <iframe src="pages/scroll.html"></iframe>
+    </div>
+    <div class="handle">||</div>
+    <div class="medium" id="codex">
+      <iframe src="pages/codex/codex-1.html"></iframe>
+    </div>
+    <div class="handle">||</div>
+    <div class="medium" id="webpage">
+      <iframe src="pages/webpage.html"></iframe>
+    </div>
+    <div class="handle">||</div>
+    <div class="medium" id="website">
+      <iframe src="pages/website/website-1.html"></iframe>
+    </div>
+    <div class="handle">||</div>
+    <div class="medium" id="feed">
+      <iframe src="pages/feed.html"></iframe>
+    </div>
+  </div>
+
+  <script src="src/scripts.js"></script>
+<div id="no-mobile"><p>Sorry – this microsite isn't optimized for your device. Come back on your desktop or resize your browser window!</p></div>
+</body>
+
+</html>
