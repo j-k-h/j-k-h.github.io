@@ -22,7 +22,7 @@
 				<div class="loading-indicator">
 					<div></div>
 				</div>
-				<div data-splitting>Hang tight, ICON is loading.<span id="dots"></span></div>
+				<div data-splitting>Hang tight, ICON is loading (slowly but surely)<span id="dots"></span></div>
 			</div>
 		</div>
 		<nav data-splitting>
@@ -261,11 +261,9 @@
 
 		<script>
 			const loadingScreen = document.getElementById('loading');
-
-			window.addEventListener('load', (event) => {
-  			console.log('page is fully loaded');
-				loadingScreen.style.opacity = '0';
-			});
+			setTimeout(() => {
+  			loadingScreen.style.opacity = '0';
+			}, 9750);
 
 			setTimeout(() => {
   			loadingScreen.style.display = 'none';
