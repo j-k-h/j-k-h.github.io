@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>ICON &mdash; Josh Krauth-Harding</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<script src="lib/splitting.min.js"></script>
+		<link rel="stylesheet" href="lib/flickity.css" type="text/css">
+		<script src="lib/flickity.pkgd.min.js"></script>
+		<script src="lib/interact.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js" integrity="sha512-w58XJ/0dVbEfZVJoJyBUOTMGBWmIW4jEYJSA0898d2L0Ghpum0FvwK7qTuHhkTctApzrchv3Neli+28ajI4+fg==" crossorigin="anonymous"></script>
+	</head>
+	<body onload="init()">
+		<div id="loading">
+			<div>
+				<div class="loading-indicator">
+					<div></div>
+				</div>
+				<div data-splitting>Hang tight, ICON is loading<span id="dots"></span></div>
+			</div>
+		</div>
+		<nav data-splitting>
+			<div class="left">
+				<a href="#hero">
+					<svg class="header-icon" viewBox="0 0 52 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<polygon fill="currentColor" points="25.899 0.525 21.7272465 14.6858252 10.0289127 5.68135017 14.9773179 19.5899564 0.220364718 19.181493 12.3991428 27.5247144 0.220364718 35.868507 14.9773179 35.4600436 10.0289127 49.3683642 21.7272465 40.3644605 25.899 54.525 30.0707535 40.3644605 41.7693729 49.3683642 36.8209677 35.4600436 51.5776353 35.868507 39.3991428 27.5247144 51.5776353 19.181493 36.8209677 19.5899564 41.7693729 5.68135017 30.0707535 14.6858252 25.8992856 0.525"></polygon>
+						</g>
+					</svg>
+					ICON
+				</a>
+			</div>
+			<div class="right">
+				<a href="#pride">
+					<svg class="header-icon" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<path fill="currentColor" d="M54,27 C28.7232611,26.0483652 27.9517932,25.2765957 26.9998471,0 C26.0482068,25.2765957 25.276433,26.0483652 9.09494702e-13,27 C25.276433,27.9516348 26.0482068,28.7234043 26.9998471,54 C27.9517932,28.7234043 28.7232611,27.9516348 54,27" id="nav-pride" fill="#000000"></path>
+						</g>
+					</svg>
+					Pride
+				</a>
+				<a href="#guidelines">
+					<svg class="header-icon" viewBox="0 0 48 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<path fill="currentColor" d="M28.2991171,23.4998984 C62.2478381,2.40681339 45.1485423,-14.6921856 24.0554869,19.256583 C2.96243145,-14.6921856 -14.1365436,2.40681339 19.8118567,23.4998984 C-14.1365436,44.5929834 2.96243145,61.6923032 24.0554869,27.7435346 C45.1485423,61.6923032 62.2478381,44.5929834 28.2991171,23.4998984" id="nav-guidelines" fill="#000000"></path>
+						</g>
+					</svg>
+					Guidelines
+				</a>
+				<a href="#icons">
+					<svg class="header-icon" viewBox="0 0 48 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<polygon fill="currentColor" points="23.8825978 0.3165 0.5 13.8167346 0.5 40.8165782 23.8825978 54.3165 47.2648827 40.8165782 47.2648827 13.8167346"></polygon>
+						</g>
+					</svg>
+					Icons
+				</a>
+			</div>
+		</nav>
+		<div class="container" data-splitting>
+			<div class="section" id="hero" data-color="#a3e063" data-hover-bg="#a3e063" data-hover-color="#000000">
+				<div id="wordmark" style="height: 100%">
+
+				</div>
+				<div class="scroll-prompt">Scroll down to begin</div>
+			</div>
+			<div class="section" id="intro" data-color="#000000" data-hover-bg="#000000" data-hover-color="#e3e3e3">
+				<div>
+					<p><a data-id="" data-highlight='{
+						"color": "#EF86EF", "bgColor": "#DB170E"
+					}' class="highlight-no-margin">Pride parades are wonderful things.</a> They represent visibility, celebration, and solidarity for a community of people who are
+						<a data-id="facts-about-suicide" data-highlight='{
+							"color": "#A3E063", "bgColor": "#78A7EA",
+							"link": "https://www.thetrevorproject.org/resources/preventing-suicide/facts-about-suicide/",
+							"html": "Facts About Suicide"
+						}'>more than five times more likely to attempt suicide as children than their heterosexual counterparts.</a> For many, Pride represents an infrequent opportunity to be loud, proud, and out. In 2019, <a data-id"" data-highlight='{
+							"color": "#EF86EF", "bgColor": "#3D0C0C",
+							"link": "https://abcnews.go.com/US/million-people-crowed-nyc-worldpride-mayor/story?id=64090338",
+							"html": "About 5 million people attended WorldPride in NYC, mayor says"
+						}'>about five million people visited New York City for its annual Pride march,</a> making it one of the largest celebrations of queerness in the world.</p>
+				</div>
+				<div>
+					<p>Contrast this to the 5,000 attendees of the first Pride march, officially called the
+					<a data-id="christopher-st" data-highlight='{
+						"color": "#52631D",
+						"bgColor": "#EFA335",
+						"img": "img/aside/christopher-st.jpg"
+					}'>Christopher Street Liberation March,</a> 49 years earlier in the exact same place. An act of protest, queer he's, she's, and they's took to the street for not dissimilar reasons of contemporary Pride marches: visibility. Protesters declared &quot;you will witness us, you will treat us as human beings, you will respect us.&quot;</p>
+				</div>
+				<p>
+					That's about where the similarities of Pride 1 and Pride 49 end. What once was a
+					<a data-id="pride-parade-first-new-york-lgbtq" data-highlight='{
+						"color": "#ef86ef", "bgColor": "#8e48d8",
+						"link": "https://www.nytimes.com/2019/06/27/nyregion/pride-parade-first-new-york-lgbtq.html",
+						"html": "The First New York Pride March was an act of &apos;Desperate Courage&apos;"
+					}'>"desperate act of courage"</a>
+					has rapidly shifted towards a holiday. Between these two points in time sits a deadly AIDS epidemic, remarkable and devoted civil rights work and the 2015 legalization of gay marriage. Because of that, many have declared the battle for queer liberation officially won.
+				</p>
+				<p>
+					But it hasn’t been won. Sure, upper-middle-class white, gay, cisgendered American men may be thriving, but their Black and brown skintoned, non-gender-conforming, disabled counterparts have won little.
+					<a data-id="fatal-anti-trans-violence-in-the-united-states-in-2019" data-highlight='{
+						"color": "#a3e063", "bgColor": "#52631d",
+						"link": "https://www.hrc.org/resources/a-national-epidemic-fatal-anti-trans-violence-in-the-united-states-in-2019",
+						"html": "A National Epidemic: Fatal Anti-Transgender Violence in the United States in 2019"
+					}'>
+						The Human Rights Campaign has declared the fatal violence against majority Black trans women of color a national epidemic.
+					</a>Most of these murders are committed by police.
+				</p>
+				<p>
+					And yet, at Pride we celebrate, police in tow. Moreso,
+					<a data-id="walmart" data-highlight='{
+						"color": "#FF8500", "bgColor": "#ffd524",
+						"img": "img/aside/walmart.jpg"
+					}'>corporations celebrate</a>.
+					Eager to show their unconditional support for queer people, rainbow-filled logos and products grace every corner of contemporary Pride parades. “Glamazon” and Chase Bank throw little pennants, bead necklaces, and branded glasses our way to shout
+					<a data-highlight='{"bgColor": "#ff00f3"}'>&quot;you go girl!&quot;</a>
+				</p>
+			</div>
+			<div class="section" id="pride" data-color="#db170e" data-hover-bg="#db170e" data-hover-color="#f6a6f6">
+				<small>Exploration I:</small>
+				<h1>How has Pride transformed over the last 50 years?</h1>
+				<div class="carousel-0">
+					<div class="carousel-cell"><img src="img/carousel-0/scans01.jpg"><div class="page-indicator">01</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans02.jpg"><div class="page-indicator">02</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans03.jpg"><div class="page-indicator">03</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans04.jpg"><div class="page-indicator">04</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans05.jpg"><div class="page-indicator">05</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans06.jpg"><div class="page-indicator">06</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans07.jpg"><div class="page-indicator">07</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans08.jpg"><div class="page-indicator">08</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans09.jpg"><div class="page-indicator">09</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans10.jpg"><div class="page-indicator">10</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans11.jpg"><div class="page-indicator">11</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans12.jpg"><div class="page-indicator">12</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans13.jpg"><div class="page-indicator">13</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans14.jpg"><div class="page-indicator">14</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans15.jpg"><div class="page-indicator">15</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans16.jpg"><div class="page-indicator">16</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans17.jpg"><div class="page-indicator">17</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans18.jpg"><div class="page-indicator">18</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans19.jpg"><div class="page-indicator">19</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans20.jpg"><div class="page-indicator">20</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans21.jpg"><div class="page-indicator">21</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans22.jpg"><div class="page-indicator">22</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans23.jpg"><div class="page-indicator">23</div></div>
+					<div class="carousel-cell"><img src="img/carousel-0/scans24.jpg"><div class="page-indicator">24</div></div>
+				</div>
+				<p>Frustrated with the disregard of queer liberation and the presence of cops and corporations at current-day Pride parades, my first visual exploration investigated the changes Pride marches and parades have undergone in the last 50 years <a data-id="nyc-pride-events-2020" data-highlight='{
+							"color": "#DB170E", "bgColor": "#EFE4DF",
+							"link": "https://www.nytimes.com/2020/06/28/nyregion/nyc-pride-events-2020.html",
+							"html": "How the Virus and Protests Changed a 50-Year Celebration of Pride"
+						}'>(though mostly 49, as COVID-19 prevented a 50th parade).</a> In this experiment, I juxtaposed photos from the Christopher Street Liberation March and photos from the last few years of parades, primarily focusing on the central gutter of the book where the two images collided. Overlain on top, personal observations I drew from the two images and their intersection worked almost as a stream of consciousness.</p>
+				<p>Specifically, I evaluated particular companies like AT&T, which though boasting unending support for their queer employees and offering products on their company store like the $4.99 &quot;AT&T Pride Cinch Pack&quot;, donated over <a data-id="these-rainbow-flag-waiving-corporations" data-highlight='{
+							"color": "#DB170E", "bgColor": "#EFE4DF",
+							"link": "https://popular.info/p/these-rainbow-flag-waiving-corporations",
+							"html": "These rainbow flag-waving corporations donated millions to anti-gay members of Congress"
+						}'>2.7 million dollars to 193 anti-gay politicians between 2017 and 2018.</a> I juxtaposed police brutality with police floats, Stonewall Inn with rainbow-themed storefronts, and picket signs with branded banners. It was not a challenge to find instances of hypocrisy.</p>
+				<p>With all of this said, however, this exploration was particularly important to me for one reason I have yet to mention: it challenged my own binary understanding of the topic at hand. At the conception of the zine, I was determined to illustrate a vibrant difference between two different Prides, showcasing how undeniably shallow contemporary parades are in contrast to the original march of 1969. But what I found was far more nuanced, that transgendered individuals were asked to march at the back of the line in 1969 in fear that they would be too difficult for onlookers to digest. I found that current day parades, as branded and corporate as they are, are also infinitely more diverse than their predecessors.</p>
+				<p>The Pride zine fundamentally shifted how I thought about liberation, political action, and celebration, and informed my later explorations in imperative and invaluable ways.</p>
+			</div>
+			<div class="section" id="guidelines" data-color="#ffdd2a" data-hover-bg="#ffdd2a" data-hover-color="#ff8500">
+				<small>Exploration II:</small>
+				<h1>Can sexuality be branded?</h1>
+				<div class="carousel-1">
+					<div class="carousel-cell"><img src="img/carousel-1/scans0000.jpg"><div class="page-indicator">01</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0001.jpg"><div class="page-indicator">02</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0002.jpg"><div class="page-indicator">03</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0003.jpg"><div class="page-indicator">04</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0004.jpg"><div class="page-indicator">05</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0005.jpg"><div class="page-indicator">06</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0006.jpg"><div class="page-indicator">07</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0007.jpg"><div class="page-indicator">08</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0008.jpg"><div class="page-indicator">09</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0009.jpg"><div class="page-indicator">10</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0010.jpg"><div class="page-indicator">11</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0011.jpg"><div class="page-indicator">12</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0012.jpg"><div class="page-indicator">13</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0013.jpg"><div class="page-indicator">14</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0014.jpg"><div class="page-indicator">15</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0015.jpg"><div class="page-indicator">16</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0016.jpg"><div class="page-indicator">17</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0017.jpg"><div class="page-indicator">18</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0018.jpg"><div class="page-indicator">19</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0019.jpg"><div class="page-indicator">20</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0020.jpg"><div class="page-indicator">21</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0021.jpg"><div class="page-indicator">22</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0022.jpg"><div class="page-indicator">23</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0023.jpg"><div class="page-indicator">24</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0024.jpg"><div class="page-indicator">25</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0025.jpg"><div class="page-indicator">26</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0026.jpg"><div class="page-indicator">27</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0027.jpg"><div class="page-indicator">28</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0028.jpg"><div class="page-indicator">29</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0029.jpg"><div class="page-indicator">30</div></div>
+					<div class="carousel-cell"><img src="img/carousel-1/scans0030.jpg"><div class="page-indicator">31</div></div>
+				</div>
+				<p>Corporate presence at Pride is more than a logo and a product, it's a <em>rainbow</em> logo and a product. My second visual exploration revolved around the idea of brand guidelines. They represent conformity and rigidness, and in many ways are the antithesis of a fluid system like sexuality. In this analysis, I spent most of my time taking a deeper look at how companies position themselves inside of social movements such as the queer liberation movement. I asked questions like: &quot;what language do they use?&quot; &quot;how do they show gay people?&quot; and <a data-id="target" data-highlight='{
+					"color": "#542800", "bgColor": "#ffdd2a",
+					"img": "img/aside/target.jpeg"
+				}'>&quot;why does Target have a giant basket float?&quot;</a></p>
+				<p>This exploration, in contrast to the previous one, enabled me to evaluate design and designers' involvement/complacency within the co-option of social change. A big part of the commentary of this piece directly referenced the harmful and tone-deaf decisions designers make when attempting to shift perception via design. In a lot of ways, I pushed this to extremes too, such as using Helvetica (a famously corporate typeface) and utilizing painfully played-out imagery like 2005 diversity images.</p>
+				<p>It also gave me the opportunity to investigate the "rainbowification" of queer branding. Specifically, I took a deeper look into the monolithic presence of <a data-id="Gilbert_Baker" data-highlight='{
+							"color": "#542800", "bgColor": "#ffdd2a",
+							"link": "https://en.wikipedia.org/wiki/Gilbert_Baker_(artist)",
+							"html": "Gilbert Baker (artist)"
+						}'>Gilbert Baker’s</a> Pride flag. Almost exclusively, queerness is represented by a wide range of vibrant hues to exemplify the vivacity and exoticism of queer culture&mdash;and although this is sometimes accurate&mdash;it also isn’t the complete truth. I found myself frustrated with how flattening and othering the Baker pride flag was, a major turning point and prompt for my next round of making.</p>
+			</div>
+			<div class="section" id="icons" data-color="#bdd7f2" data-hover-bg="#bdd7f2" data-hover-color="#8e48d8">
+				<small>Exploration III:</small>
+				<h1>What would it look like to depict my queerness visually?</h1>
+				<div id="video">
+					<video src="ICON.mp4" onclick="videoPlayer.playPause()" onended="videoPlayer.onEnded()"></video>
+					<div class="video-controls">
+						<div id="video-controls">
+							<svg onclick="videoPlayer.playPause()" style="max-width: 1.5vw; margin-left: 0.667vw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.19 130.38"><g id="Layer_2" data-name="Layer 2"><g id="Icons"><polygon fill="currentColor" points="0 0 65.19 65.19 0 130.38 0 0"/></g></g></svg>
+							<svg onclick="videoPlayer.playPause()" style="max-height: 3vw; display: none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96.99 109.08"><g id="Layer_2" data-name="Layer 2"><g id="Icons"><rect fill="currentColor" width="36.51" height="109.08"/><rect fill="currentColor" x="60.48" width="36.51" height="109.08"/></g></g></svg>
+							<input min="0" max="100" value="25" oninput="videoPlayer.scrubVolume(this)" class="volume-slider" type="range" autocomplete="off"/>
+						</div>
+					</div>
+				</div>
+				<p>Through two previous interrogations of Pride and design, my final exploration enabled me to apply my gathered insights and apply them genuinely. While both the zine and the brand guidelines were based in critique, ICON is an authentic and deeply personalized response.</p>
+				<p>Originally, I had planned on designing a system that I felt more accurately represented queerness&mdash;more than Baker’s rainbow did&mdash;but I found quickly that creating an alternative that was meant to be equally as all-encapsulating would be equally as flattening.</p>
+				<p>Instead, ICON is a library of iconographic compositions that visually depict my sexuality. Just my sexuality. Each portrait, consisting of one to five forms varying in complexity, responds to a different element of my personal queerness. Through prompts like growth, coming out, performance, and protection, I’ve developed forms and chosen colors that I feel cohesively and accurately capture the essence of my sexual experience.</p>
+				<p>Through motion, this final system utilizes movement, color, and form to paint a more honest acknowledgement of the multi-dimensionality of queerness and its individual application to each person who experiences it.</p>
+			</div>
+			<div class="section" id="cards" data-color="#000000" data-hover-bg="#000000" data-hover-color="#e3e3e3">
+				<div id="cards-inner"></div>
+			</div>
+			<div class="section" id="outro" data-color="#EF5237" data-hover-bg="#EF5237" data-hover-color="#3d0c0c">
+				<div class="carousel-2">
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters00.jpg"><div class="page-indicator">01</div></div>
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters01.jpg"><div class="page-indicator">02</div></div>
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters02.jpg"><div class="page-indicator">03</div></div>
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters03.jpg"><div class="page-indicator">04</div></div>
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters04.jpg"><div class="page-indicator">05</div></div>
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters05.jpg"><div class="page-indicator">06</div></div>
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters06.jpg"><div class="page-indicator">07</div></div>
+					<div class="carousel-cell-portrait"><img src="img/carousel-2/posters07.jpg"><div class="page-indicator">08</div></div>
+				</div>
+				<p>ICON is not a solution, but a personal journey. It’s content, authored by and individual to me, asks grander questions about the involvement of design and its relationship to people. It asks designers to challenge the notion of universality in design, and asks corporations to think twice before splashing their logo with a rainbow hue for Pride month.</p>
+			</div>
+			<div class="section" id="footer">
+				<p>Made with ❤️ by <a href="https://jkh.design" target="_blank">Josh Krauth-Harding</a></p>
+				<p>Special thanks to <a href="https://github.com/AdamJLE" target="_blank">Adam Englishby</a> for code help</p>
+				<img src="img/logo-footer.svg" width="250vw"/>
+			</div>
+		</div>
+
+		<button id="toggle-text-effect-button" onclick="toggleText()">
+			<span id="toggled-text-circle">&#9679;</span> Toggle text effect
+		</button>
+		<button id="reset-button" onclick="resetText()">
+			Reset
+		</button>
+
+
+		<script>
+			// loading screen
+		
+			let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent); // https://stackoverflow.com/a/23522755
+			let now = performance.now();
+			let animationDone = false;
+			let loadDone = false;
+		
+			if(isSafari) {
+				document.body.style.overflow = "hidden";
+				let dots = document.getElementById("dots");
+				let dotsStr = "";
+				let dotsTimeout = setInterval(() => {
+					dots.innerHTML = dotsStr;
+					dotsStr += ".";
+					if(dotsStr === "....") {
+						dotsStr = ".";
+					}
+					if(performance.now() - now > 2000) {
+						animationDone = true;
+					}
+					if(animationDone && loadDone) {
+						clearInterval(dotsTimeout);
+						document.getElementById("loading").style = "opacity: 0; pointer-events: none";
+						document.body.style.overflow = "";
+					}
+				}, 500);
+				
+				document.addEventListener("DOMContentLoaded", () => {
+					loadDone = true;
+				});
+			} else {
+				document.getElementById("loading").style = "opacity: 0; pointer-events: none";
+			}
+		
+		</script>
+
+		<script>
+			function random(min, max) {
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			}
+
+			// handle text splitting
+			let textEnabled = true;
+
+			Splitting();
+			let resetButton = false;
+			document.querySelectorAll("span.char[data-char]").forEach(letter => {
+				letter.addEventListener("mouseover", (event) => {
+					if(textEnabled) {
+						if(!resetButton) {
+							resetButton = true;
+							document.getElementById("reset-button").style.left = "1vw";
+						}
+						if("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(letter.getAttribute("data-char")) !== -1) {
+							letter.style.fontFamily = "'ICON', monospace";
+							letter.style.fontWeight = "normal";
+							letter.style.lineHeight = "1.9vw";
+						}
+					}
+				});
+			});
+
+			function resetText() {
+				document.querySelectorAll("span.char[data-char]").forEach(letter => {
+					if(letter.style.fontFamily !== "") {
+						letter.style.fontFamily = "";
+					}
+				});
+				document.getElementById("reset-button").style.left = "";
+				resetButton = false;
+			}
+
+			function toggleText() {
+				resetText();
+				textEnabled = !textEnabled;
+				if(!textEnabled) {
+					document.getElementById("toggled-text-circle").style.opacity = "0.333";
+				} else {
+					document.getElementById("toggled-text-circle").style.opacity = "";
+				}
+			}
+
+		</script>
+
+		<script>
+			// draggable cards
+			let cardData = [
+				{ name: "Affection", svg: "affection.svg", color: "#542800", bgColor: "#ef5237" },
+				{ name: "Attraction", svg: "attraction.svg", color: "#3d0c0c", bgColor: "#ff00f3" },
+				{ name: "Binarism", svg: "binarism.svg", color: "#db170e", bgColor: "#ef86ef" },
+				{ name: "Coming Out", svg: "coming-out.svg", color: "#ef86ef", bgColor: "#8e48d8" },
+				{ name: "Community", svg: "community.svg", color: "#ef86ef", bgColor: "#8e48d8" },
+				{ name: "Conformity", svg: "conformity.svg", color: "#efa335", bgColor: "#542800" },
+				{ name: "Conversion", svg: "conversion.svg", color: "#52631d", bgColor: "#a3e063" },
+				{ name: "Emotional Attraction", svg: "emotional-attraction.svg", color: "#ef86ef", bgColor: "#8e48d8" },
+				{ name: "First Love", svg: "first-love.svg", color: "#ffd524", bgColor: "#ff8500" },
+				{ name: "Flamboyance", svg: "flamboyance.svg", color: "#3d0c0c", bgColor: "#ff00f3" },
+				{ name: "Fluidity", svg: "fluidity.svg", color: "#ffd524", bgColor: "#ff8500" },
+				{ name: "Gender Identity", svg: "gender-identity.svg", color: "#542800", bgColor: "#ffd524" },
+				{ name: "Growth", svg: "growth.svg", color: "#8e48d8", bgColor: "#78a7ea" },
+				{ name: "Homogeneity", svg: "homogeneity.svg", color: "#78a7ea", bgColor: "#efe4df" },
+				{ name: "Intersectionality", svg: "intersectionality.svg", color: "#8e48d8", bgColor: "#78a7ea" },
+				{ name: "Intimacy", svg: "intimacy.svg", color: "#78a7ea", bgColor: "#efe4df" },
+				{ name: "Masculinity", svg: "masculinity.svg", color: "#ffd524", bgColor: "#542800" },
+				{ name: "Mental Health", svg: "mental-health.svg", color: "#a3e063", bgColor: "#52631d" },
+				{ name: "Normativity", svg: "normativity.svg", color: "#a3e063", bgColor: "#52631d" },
+				{ name: "Otherness", svg: "otherness.svg", color: "#db170e", bgColor: "#ef86ef" },
+				{ name: "Outward Identity", svg: "outward-identity.svg", color: "#542800", bgColor: "#bdd7f2" },
+				{ name: "Performance", svg: "performance.svg", color: "#db170e", bgColor: "#efa335" },
+				{ name: "Presentation", svg: "presentation.svg", color: "#78a7ea", bgColor: "#ffd524" },
+				{ name: "Protection", svg: "protection.svg", color: "#a3e063", bgColor: "#52631d" },
+				{ name: "Romance", svg: "romance.svg", color: "#ef86ef", bgColor: "#db170e" },
+				{ name: "Sex", svg: "sex.svg", color: "#3d0c0c", bgColor: "#ffd524" },
+				{ name: "Solidarity", svg: "solidarity.svg", color: "#a3e063", bgColor: "#3d0c0c" },
+				{ name: "Trauma", svg: "trauma.svg", color: "#ef86ef", bgColor: "#db170e" },
+				{ name: "Voice", svg: "voice.svg", color: "#52631d", bgColor: "#a3e063" },
+				{ name: "Witnessing", svg: "witnessing.svg", color: "#db170e", bgColor: "#ef86ef" }
+			];
+			let cardSection = document.getElementById("cards-inner");
+			cardData.forEach(card => {
+				let cardElement = document.createElement("div");
+				cardElement.className = "draggable-card";
+				cardElement.innerHTML = "<div class='svg' style='background-image: url(img/icons/" + card.svg + ")'></div><div class='text'>&quot;" + card.name + "&quot;</div>";
+				let width = 10;
+				let height = 18;
+				cardElement.style = `color: ${card.color}; background-color: ${card.bgColor}; left: ${random(5 * 100, (95 - width) * 100) / 100}vw; top: ${random(0,(10 + height) * 100) / 100}vw`;
+				cardSection.appendChild(cardElement);
+			});
+			document.querySelectorAll(".draggable-card", card => {
+				card.setAttribute("data-x", 0);
+				card.setAttribute("data-y", 0);
+			});
+
+			interact(".draggable-card")
+				.draggable({
+					inertia: {
+						resistance: 15,
+						minSpeed: 200,
+						endSpeed: 100
+					},
+					modifiers: [
+						interact.modifiers.restrictRect({
+							restriction: "parent",
+							endOnly: true
+						})
+					],
+					autoScroll: true,
+					listeners: {
+						move: dragMoveListener
+					}
+				});
+
+			function dragMoveListener(event) {
+				let target = event.target;
+				let x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
+				let y = (parseFloat(target.getAttribute("data-y")) || 0) + event.dy;
+				target.style.transform = "translate(" + x + "px, " + y + "px)";
+				target.setAttribute("data-x", x);
+				target.setAttribute("data-y", y);
+			}
+
+		</script>
+
+		<script>
+			// carousels
+			let carousels = [];
+			let lastCarouselScroll = new Date().getTime();
+			for(let i = 0; i < 3; i++) {
+				let c = new Flickity(document.querySelector(".carousel-" + i), {
+					wrapAround: true,
+					imagesLoaded: true,
+					cellAlign: "center",
+					contain: true,
+					prevNextButtons: true,
+					pageDots: false
+				});
+				carousels.push(document.querySelector(".carousel-" + i + " > .flickity-viewport > .flickity-slider"));
+			}
+			document.addEventListener("scroll", () => calcScroll());
+		</script>
+
+		<script>
+			// handle dynamic article sources
+			let sources = document.querySelectorAll("a[data-highlight]");
+
+			function init() {
+				calcScroll();
+				sources.forEach(e => {
+					let data = JSON.parse(e.getAttribute("data-highlight"));
+					e.href = data.link || "#";
+
+					let style = "";
+					if(data.color) {
+						style = "color: " + data.color + "; ";
+					}
+					if(data.bgColor) {
+						style += "background-color: " + data.bgColor + "; ";
+					}
+
+					if(data.img) {
+						let y = e.getBoundingClientRect().top + window.pageYOffset;
+						let div = document.createElement("div");
+						div.className = "aside-image";
+						div.setAttribute("data-id", e.getAttribute("data-id"));
+						div.style.backgroundColor = data.bgColor;
+						div.style.top = y + "px";
+						div.innerHTML = `<img src="${data.img}"/>`;
+						document.body.appendChild(div);
+					}
+
+					if(data.link) {
+						e.target = "_blank";
+						let y = e.getBoundingClientRect().top + window.pageYOffset;
+
+						let a = document.createElement("a");
+						a.href = data.link;
+						a.target = "_blank";
+
+						let aside = document.createElement("aside");
+
+						// sorry this is bad
+						let svg = `<svg xmlns="http://www.w3.org/2000/svg" height="81" width="81" viewBox="0 0 81.62 81.62"><g fill="currentColor" id="Layer_2" data-name="Layer 2"><g id="Icons"><polygon points="18.54 0 18.54 13 59.43 13 0 72.43 9.19 81.62 68.62 22.19 68.62 63.08 81.62 63.08 81.62 0 18.54 0"/></g></g></svg>`;
+
+						aside.innerHTML = data.html + "<p>" + data.link.split("://")[1].split("/")[0] + "</p><div style='background-color: inherit' class='aside-icon'>" + svg + "</div>";
+                        aside.style = "position: absolute; top: " + y + "px; color: " + data.color + "; background-color: " + data.bgColor;
+                        if(e.getAttribute("data-id")) {
+                            aside.setAttribute("data-id", e.getAttribute("data-id"));
+                        }
+
+                        if(data.color && data.bgColor) {
+                            let tempStyle = aside.style;
+                            aside.addEventListener("mouseover", () => {
+                                aside.style.color = data.bgColor;
+                                aside.style.backgroundColor = data.color;
+                            });
+                            aside.addEventListener("mouseleave", () => {
+                                aside.style.color = data.color;
+                                aside.style.backgroundColor = data.bgColor;
+                            });
+                        }
+						a.appendChild(aside);
+						document.body.appendChild(a);
+					} else {
+						style += "text-decoration: none; ";
+					}
+
+					if((data.color || data.bgColor) && data.link) {
+						let oldStyle = style;
+						e.addEventListener("mouseover", () => {
+							let newStyle = style.replace(data.color, "_color").replace(data.bgColor, data.color).replace("_color", data.bgColor);
+							e.style = newStyle;
+						});
+						e.addEventListener("mouseleave", () => {
+							style = oldStyle;
+							e.style = oldStyle;
+						});
+					}
+
+					e.style = style;
+				});
+				setInterval(() => {
+					sources.forEach(e => {
+						let y = e.getBoundingClientRect().top + window.pageYOffset;
+						let aside = document.querySelector("aside[data-id='" + e.getAttribute("data-id") + "']");
+						if(aside) {
+							aside.style.top = y + "px";
+						}
+						let img = document.querySelector(".aside-image[data-id='" + e.getAttribute("data-id") + "']");
+						if(img) {
+							img.style.top = y + "px";
+						}
+					});
+				}, 500);
+			}
+
+		</script>
+
+		<script>
+			// dynamic nav stuff
+			let nav = document.querySelector("nav");
+			let sections = document.querySelectorAll(".section[data-color]");
+			let rotatingIcons = document.querySelectorAll(".header-icon");
+			let currentColor = "";
+
+			function calcScroll() {
+				rotatingIcons.forEach(i => {
+					if(i.getAttribute("viewBox") === "0 0 48 47") {
+						i.style = "transform: rotateZ(" + (window.pageYOffset / 2) + "deg) scale(0.8)";
+					} else if(i.getAttribute("viewBox") === "0 0 54 54") {
+						i.style = "transform: rotateZ(" + (window.pageYOffset / 2) + "deg) scale(1.2)";
+					} else i.style = "transform: rotateZ(" + (window.pageYOffset / 2) + "deg)";
+				});
+				sections.forEach(section => {
+					let navRect = nav.getBoundingClientRect();
+					let rect = section.getBoundingClientRect();
+					let attrColor = section.getAttribute("data-color");
+					if(currentColor !== attrColor) {
+						if(rect.top + rect.height > navRect.top && rect.left + rect.width > navRect.left && rect.bottom - rect.height < navRect.bottom && rect.right - rect.width < navRect.right) {
+							let color = section.getAttribute("data-color");
+							let bgColor = section.getAttribute("data-hover-bg");
+							let hoverColor = section.getAttribute("data-hover-color");
+							if(bgColor) {
+								document.documentElement.style.setProperty("--header-nav-hover-bg", bgColor);
+							}
+							if(hoverColor) {
+								document.documentElement.style.setProperty("--header-nav-hover-color", hoverColor);
+							}
+							nav.style.color = color;
+							currentColor = color;
+						}
+					}
+				});
+			}
+
+		</script>
+
+		<script>
+			// custom video player
+
+			const videoPlayer = {
+				videoElem: null,
+				initialised: false,
+				initVideo: (e) => {
+					videoPlayer.videoElem = e;
+					if(!videoPlayer.initialised) {
+						videoPlayer.initialised = true;
+						videoPlayer.videoElem.volume = 0.2;
+						e.style = "opacity: 0; transform: scale(1)";
+					}
+				},
+				playPause: () => {
+					if(!videoPlayer.videoElem) {
+						videoPlayer.initVideo(document.querySelector("video"));
+					} else if(videoPlayer.videoElem.paused) {
+						document.getElementById("video-controls").querySelector("svg:nth-of-type(1)").style.display = "none";
+						document.getElementById("video-controls").querySelector("svg:nth-of-type(2)").style.display = "";
+						videoPlayer.videoElem.style = "opacity: 1";
+						videoPlayer.videoElem.play();
+					} else {
+						document.getElementById("video-controls").querySelector("svg:nth-of-type(1)").style.display = "";
+						document.getElementById("video-controls").querySelector("svg:nth-of-type(2)").style.display = "none";
+						videoPlayer.videoElem.style = "opacity: 1";
+						videoPlayer.videoElem.pause();
+					}
+				},
+				scrubVolume: (elem) => {
+					videoPlayer.videoElem.volume = elem.value / 100;
+				},
+				onEnded: () => {
+					document.getElementById("video-controls").querySelector("svg:nth-of-type(1)").style.display = "";
+					document.getElementById("video-controls").querySelector("svg:nth-of-type(2)").style.display = "none";
+				}
+			}
+
+			videoPlayer.initVideo(document.querySelector("video"));
+
+		</script>
+
+		<script>
+			// lottie hero animation
+			var animation = bodymovin.loadAnimation({
+				container: document.getElementById("wordmark"),
+				animationData: {"v":"5.7.8","fr":29.9700012207031,"ip":0,"op":176.000007168627,"w":986,"h":318,"nm":"LOGO","ddd":0,"assets":[],"layers":[{"ddd":0,"ind":1,"ty":4,"nm":"N","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[842.839,155.843,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[51,51,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":1,"y":0},"t":0,"s":[{"i":[[55.874,36.995],[106.524,-137.804],[19.014,3.102],[-34.17,117.57],[-49.438,70.733],[-28.079,-2.2],[-80.665,-13.226],[-26.849,-11.361],[74.015,0.136]],"o":[[-26.193,-17.342],[-23.162,29.963],[-47.04,-7.674],[3.617,-12.447],[36.328,-51.975],[70.538,5.527],[61.487,10.082],[43.045,18.215],[-74.922,-0.138]],"v":[[11.109,106.451],[-151.079,224.677],[-215.482,262.789],[-219.732,-31.968],[-147.158,-180.278],[-56.968,-263.183],[100.202,-106.441],[234.975,-119.751],[133.431,239.37]],"c":true}]},{"i":{"x":0,"y":1},"o":{"x":0.8,"y":0},"t":83.165,"s":[{"i":[[41.259,-7.097],[106.524,-137.804],[19.014,3.102],[-34.17,117.57],[-49.438,70.733],[-28.079,-2.2],[-80.665,-13.226],[-26.849,-11.361],[74.015,0.136]],"o":[[-30.959,5.326],[-23.162,29.963],[-47.04,-7.674],[3.617,-12.447],[36.328,-51.975],[70.538,5.527],[61.487,10.082],[43.045,18.215],[-74.922,-0.138]],"v":[[-37.911,-103.353],[-151.079,224.677],[-215.482,262.789],[-219.732,-31.968],[-147.158,-180.278],[-56.968,-263.183],[96.281,-18.206],[234.975,-119.751],[133.431,239.37]],"c":true}]},{"t":176.000007168627,"s":[{"i":[[55.874,36.995],[106.524,-137.804],[19.014,3.102],[-34.17,117.57],[-49.438,70.733],[-28.079,-2.2],[-80.665,-13.226],[-26.849,-11.361],[74.015,0.136]],"o":[[-26.193,-17.342],[-23.162,29.963],[-47.04,-7.674],[3.617,-12.447],[36.328,-51.975],[70.538,5.527],[61.487,10.082],[43.045,18.215],[-74.922,-0.138]],"v":[[11.109,106.451],[-151.079,224.677],[-215.482,262.789],[-219.732,-31.968],[-147.158,-180.278],[-56.968,-263.183],[100.202,-106.441],[234.975,-119.751],[133.431,239.37]],"c":true}]}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.639215686275,0.878431372549,0.388235294118,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":230.000009368092,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":4,"nm":"O","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.2],"y":[1]},"o":{"x":[1],"y":[0]},"t":0,"s":[80]},{"i":{"x":[0],"y":[1]},"o":{"x":[0.8],"y":[0]},"t":83.165,"s":[0]},{"t":176.000007168627,"s":[80]}],"ix":10},"p":{"a":0,"k":[562.39,156.046,0],"ix":2,"l":2},"a":{"a":0,"k":[2484.608,2796.796,0],"ix":1,"l":2},"s":{"a":0,"k":[51,51,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[44.233,14.012],[41.731,-2.382],[-53.726,-52.484],[13.586,-23.688],[12.387,-2.705],[10.875,6.237],[8.435,43.789],[29.018,50.176],[0,0],[8.206,-38.131],[7.573,-13.205],[12.923,-3.171],[11.648,6.68],[2.134,12.942],[-7.691,13.411],[-29.663,26.547],[-25.374,46.06],[10.122,-1.419],[15.75,-4.898],[9.716,-1.151],[12.079,6.927],[3.182,12.949],[-6.763,11.792],[-39.29,-12.931],[-51.238,2.466],[0,0],[52.714,46.161],[-15.302,26.682],[-13.975,0.984],[-9.699,-5.562],[-8.958,-49.156],[-21.155,-31.472],[0,0],[0,0],[-6.412,36.822],[-4.008,6.989],[-14.415,4.891],[-13.978,-8.017],[-2.025,-13.545],[7.573,-13.205],[39.15,-37.664],[7.54,-23.033],[0,0],[-47.433,16.139],[-17.853,-10.239],[-2.111,-12.046],[5.344,-9.319]],"o":[[-70.09,-22.144],[20.303,35.89],[32.604,31.589],[-7.567,13.193],[-12.38,2.693],[-15.915,-9.128],[-8.417,-43.794],[0,0],[-18.48,32.223],[-8.187,38.126],[-8.685,15.143],[-12.905,3.167],[-13.586,-7.792],[-2.122,-12.935],[5.064,-8.829],[29.676,-26.544],[-44.803,4.149],[-10.117,1.401],[-45.207,13.876],[-9.705,1.142],[-11.683,-6.7],[-3.176,-12.951],[13.753,-23.979],[65.569,21.424],[0,0],[-20.331,-35.823],[-30.276,-26.625],[8.204,-14.304],[13.984,-0.973],[16.307,9.353],[8.958,49.156],[0,0],[0,0],[26.279,-45.82],[6.419,-36.833],[7.348,-12.813],[14.415,-4.891],[12.813,7.348],[2.037,13.552],[-2.004,3.494],[-39.131,37.659],[0,0],[43.477,0.674],[47.445,-16.132],[13.978,8.017],[2.122,12.053],[-16.033,27.956]],"v":[[2670.483,2837.29],[2502.737,2807.646],[2613.776,2940.213],[2642.301,3023.134],[2612.367,3046.987],[2577.483,3041.686],[2540.967,2962.308],[2484.811,2821.358],[2476.126,2836.5],[2436.112,2942.031],[2412.466,3019.024],[2380.07,3046.496],[2343.228,3041.233],[2319.659,3010.131],[2328.006,2970.611],[2380.1,2917.564],[2462.679,2808.665],[2380.277,2817.013],[2341.472,2826.475],[2259.087,2849.008],[2226.409,2840.338],[2204.117,2810.866],[2209.496,2773.741],[2289.072,2757.167],[2464.298,2785.6],[2457.694,2774.109],[2348.125,2651.142],[2325.664,2571.188],[2358.938,2548.259],[2394.459,2555.149],[2432.357,2642.914],[2477.542,2763.857],[2483.388,2772.556],[2488.065,2764.402],[2537.101,2640.44],[2552.736,2574.718],[2585.38,2548.163],[2627.968,2552.852],[2650.237,2584.198],[2641.929,2624.324],[2580.208,2686.06],[2510.196,2777.095],[2507.267,2786.251],[2643.626,2763.065],[2741.573,2754.225],[2765.717,2784.326],[2760.878,2816.38]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.639215686275,0.878431372549,0.388235294118,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":230.000009368092,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":4,"nm":"C MASK","td":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[305,159,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[39,39,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[127.417,-13.581],[-20.879,-195.894],[-195.894,20.879],[-58.475,60.389]],"o":[[0,0],[-75.47,-103.557],[-195.894,20.879],[20.879,195.894],[83.587,-8.909],[0,0]],"v":[[7.414,2.706],[350.336,-162.854],[-3.618,-357.086],[-322.648,38.064],[72.502,357.094],[335.669,209.275]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.89019613827,0.89019613827,0.89019613827,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":230.000009368092,"st":0,"bm":0},{"ddd":0,"ind":4,"ty":4,"nm":"C","tt":1,"sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.2],"y":[1]},"o":{"x":[1],"y":[0]},"t":0,"s":[30]},{"i":{"x":[0],"y":[1]},"o":{"x":[0.8],"y":[0]},"t":83.165,"s":[0]},{"t":176.000007168627,"s":[30]}],"ix":10},"p":{"a":0,"k":[305,159,0],"ix":2,"l":2},"a":{"a":0,"k":[0,0,0],"ix":1,"l":2},"s":{"a":0,"k":[39,39,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[49.84,0],[0,49.84],[-49.84,0],[0,-49.84]],"o":[[-49.84,0],[0,-49.84],[49.84,0],[0,49.84]],"v":[[-0.005,90.25],[-90.255,0],[-0.005,-90.25],[90.245,0]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ind":1,"ty":"sh","ix":2,"ks":{"a":0,"k":{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[108.415,6.41],[325.795,0],[108.415,-6.41],[323.625,-37.7],[106.965,-18.99],[317.085,-75.06],[104.075,-31.2],[306.205,-111.46],[99.785,-42.99],[291.145,-146.31],[94.135,-54.23],[272.165,-179.12],[87.175,-64.79],[249.545,-209.46],[79.005,-74.51],[223.595,-236.96],[69.765,-83.23],[194.625,-261.29],[59.605,-90.81],[163.005,-282.13],[48.685,-97.13],[129.115,-299.18],[37.155,-102.11],[93.415,-312.17],[25.145,-105.7],[56.465,-320.9],[12.745,-107.87],[18.845,-325.26],[0.005,-108.6],[-0.005,-108.71],[-18.795,-324.72],[-18.845,-325.26],[-18.825,-324.72],[-12.745,-107.87],[-56.355,-320.39],[-56.455,-320.9],[-56.385,-320.39],[-25.145,-105.7],[-93.255,-311.69],[-93.415,-312.18],[-93.285,-311.68],[-37.155,-102.11],[-128.885,-298.72],[-129.105,-299.18],[-128.915,-298.7],[-48.685,-97.13],[-162.725,-281.69],[-162.995,-282.13],[-162.745,-281.67],[-59.605,-90.81],[-194.295,-260.87],[-194.625,-261.29],[-194.325,-260.86],[-69.765,-83.23],[-223.205,-236.58],[-223.585,-236.96],[-223.225,-236.56],[-79.005,-74.51],[-249.125,-209.13],[-249.545,-209.46],[-249.145,-209.1],[-87.175,-64.79],[-271.715,-178.84],[-272.165,-179.12],[-271.735,-178.82],[-94.135,-54.23],[-290.675,-146.09],[-291.145,-146.31],[-290.685,-146.06],[-99.785,-42.99],[-305.705,-111.3],[-306.195,-111.46],[-305.715,-111.27],[-104.075,-31.21],[-316.575,-74.95],[-317.085,-75.06],[-316.575,-74.92],[-106.965,-18.99],[-323.095,-37.65],[-323.625,-37.7],[-323.105,-37.62],[-108.415,-6.41],[-325.255,-0.02],[-325.795,0],[-325.255,0.02],[-108.415,6.41],[-323.105,37.62],[-323.625,37.7],[-323.095,37.65],[-106.965,18.99],[-316.575,74.92],[-317.085,75.06],[-316.575,74.95],[-104.075,31.2],[-305.715,111.27],[-306.205,111.46],[-305.705,111.3],[-99.785,42.99],[-290.685,146.06],[-291.145,146.31],[-290.675,146.09],[-94.135,54.23],[-271.735,178.82],[-272.165,179.12],[-271.715,178.84],[-87.175,64.79],[-249.145,209.1],[-249.545,209.46],[-249.125,209.13],[-79.005,74.51],[-223.225,236.56],[-223.585,236.96],[-223.205,236.58],[-69.765,83.23],[-194.325,260.86],[-194.625,261.29],[-194.295,260.87],[-59.605,90.81],[-162.755,281.67],[-163.005,282.13],[-162.725,281.68],[-48.685,97.13],[-128.925,298.7],[-129.115,299.18],[-128.895,298.71],[-37.155,102.11],[-93.285,311.68],[-93.415,312.17],[-93.255,311.69],[-25.145,105.7],[-56.395,320.39],[-56.465,320.9],[-56.365,320.39],[-12.745,107.87],[-18.825,324.72],[-18.845,325.26],[-18.795,324.72],[-0.005,108.71],[0.005,108.6],[18.845,325.26],[12.745,107.87],[56.455,320.9],[25.145,105.7],[93.415,312.18],[37.155,102.11],[129.105,299.18],[48.685,97.13],[162.995,282.13],[59.605,90.81],[194.625,261.29],[69.765,83.23],[223.585,236.96],[79.005,74.51],[249.545,209.46],[87.175,64.79],[272.165,179.12],[94.135,54.23],[291.145,146.31],[99.785,42.99],[306.195,111.46],[104.075,31.21],[317.085,75.06],[106.965,18.99],[323.625,37.7]],"c":true},"ix":2},"nm":"Path 2","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.639215686275,0.878431372549,0.388235294118,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":3,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":230.000009368092,"st":0,"bm":0},{"ddd":0,"ind":5,"ty":4,"nm":"I","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[92.041,155.843,0],"ix":2,"l":2},"a":{"a":0,"k":[1562.354,2796.398,0],"ix":1,"l":2},"s":{"a":0,"k":[51,51,100],"ix":6,"l":2}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":1,"y":0},"t":0,"s":[{"i":[[0,-11.978],[11.977,0],[0,11.978],[-11.978,0]],"o":[[0,11.978],[-11.978,0],[0,-11.978],[11.977,0]],"v":[[1584.04,2670.302],[1562.354,2691.988],[1540.668,2670.302],[1562.354,2648.616]],"c":true}]},{"i":{"x":0,"y":1},"o":{"x":0.8,"y":0},"t":83.165,"s":[{"i":[[0,-11.978],[11.977,0],[0,11.978],[-11.978,0]],"o":[[0,11.978],[-11.978,0],[0,-11.978],[11.977,0]],"v":[[1584.04,2591.87],[1562.354,2613.556],[1540.668,2591.87],[1562.354,2570.185]],"c":true}]},{"t":176.000007168627,"s":[{"i":[[0,-11.978],[11.977,0],[0,11.978],[-11.978,0]],"o":[[0,11.978],[-11.978,0],[0,-11.978],[11.977,0]],"v":[[1584.04,2670.302],[1562.354,2691.988],[1540.668,2670.302],[1562.354,2648.616]],"c":true}]}],"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ind":1,"ty":"sh","ix":2,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":1,"y":0},"t":0,"s":[{"i":[[0,-11.978],[11.977,0],[0,11.978],[-11.978,0]],"o":[[0,11.978],[-11.978,0],[0,-11.978],[11.977,0]],"v":[[1584.04,2922.493],[1562.354,2944.179],[1540.668,2922.493],[1562.354,2900.808]],"c":true}]},{"i":{"x":0,"y":1},"o":{"x":0.8,"y":0},"t":83.165,"s":[{"i":[[0,-11.978],[11.977,0],[0,11.978],[-11.978,0]],"o":[[0,11.978],[-11.978,0],[0,-11.978],[11.977,0]],"v":[[1584.04,3000.925],[1562.354,3022.611],[1540.668,3000.925],[1562.354,2979.239]],"c":true}]},{"t":176.000007168627,"s":[{"i":[[0,-11.978],[11.977,0],[0,11.978],[-11.978,0]],"o":[[0,11.978],[-11.978,0],[0,-11.978],[11.977,0]],"v":[[1584.04,2922.493],[1562.354,2944.179],[1540.668,2922.493],[1562.354,2900.808]],"c":true}]}],"ix":2},"nm":"Path 2","mn":"ADBE Vector Shape - Group","hd":false},{"ind":2,"ty":"sh","ix":3,"ks":{"a":1,"k":[{"i":{"x":0.2,"y":1},"o":{"x":1,"y":0},"t":0,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[1406.688,2729.055],[1500.99,2729.055],[1536.698,2777.302],[1536.698,2815.494],[1500.99,2863.741],[1406.688,2863.741],[1406.688,2981.252],[1718.02,2981.252],[1718.02,2863.741],[1634.911,2863.741],[1599.203,2815.494],[1599.203,2777.302],[1634.911,2729.055],[1718.02,2729.055],[1718.02,2611.543],[1406.688,2611.543]],"c":true}]},{"i":{"x":0,"y":1},"o":{"x":0.8,"y":0},"t":83.165,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[1406.688,2650.623],[1500.99,2650.623],[1536.698,2698.87],[1536.698,2893.925],[1500.99,2942.172],[1406.688,2942.172],[1406.688,3059.684],[1718.02,3059.684],[1718.02,2942.172],[1634.911,2942.172],[1599.203,2893.925],[1599.203,2698.87],[1634.911,2650.623],[1718.02,2650.623],[1718.02,2533.112],[1406.688,2533.112]],"c":true}]},{"t":176.000007168627,"s":[{"i":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"o":[[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]],"v":[[1406.688,2729.055],[1500.99,2729.055],[1536.698,2777.302],[1536.698,2815.494],[1500.99,2863.741],[1406.688,2863.741],[1406.688,2981.252],[1718.02,2981.252],[1718.02,2863.741],[1634.911,2863.741],[1599.203,2815.494],[1599.203,2777.302],[1634.911,2729.055],[1718.02,2729.055],[1718.02,2611.543],[1406.688,2611.543]],"c":true}]}],"ix":2},"nm":"Path 3","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"fl","c":{"a":0,"k":[0.639215686275,0.878431372549,0.388235294118,1],"ix":4},"o":{"a":0,"k":100,"ix":5},"r":1,"bm":0,"nm":"Fill 1","mn":"ADBE Vector Graphic - Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":4,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":230.000009368092,"st":0,"bm":0}],"markers":[]},
+				renderer: "svg",
+				loop: true,
+				autoplay: true,
+			})
+
+		</script>
+
+	</body>
+</html>
