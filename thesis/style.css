@@ -61,7 +61,7 @@ body {
 	right: 0;
 	bottom: 0;
 	background: linear-gradient(90deg, #EF86EF 0%, #EFA335 10%, #52631D 30%, #78A7EA 41%, #8E48D8 54%, #A3E063 85%, #FF8500 100%);
-	animation: loading 9.75s cubic-bezier(.67,.2,.8,.67);
+	animation: loading 9.5s cubic-bezier(.67,.2,.8,.67);
 }
 
 @keyframes loading {
