@@ -22,7 +22,7 @@
 				<div class="loading-indicator">
 					<div></div>
 				</div>
-				<div data-splitting>Hang tight, ICON is loading<span id="dots"></span></div>
+				<div data-splitting>Hang tight, ICON is loading.<span id="dots"></span></div>
 			</div>
 		</div>
 		<nav data-splitting>
@@ -259,42 +259,17 @@
 			Reset
 		</button>
 
-
 		<script>
-			// loading screen
-		
-			let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent); // https://stackoverflow.com/a/23522755
-			let now = performance.now();
-			let animationDone = false;
-			let loadDone = false;
-		
-			if(isSafari) {
-				document.body.style.overflow = "hidden";
-				let dots = document.getElementById("dots");
-				let dotsStr = "";
-				let dotsTimeout = setInterval(() => {
-					dots.innerHTML = dotsStr;
-					dotsStr += ".";
-					if(dotsStr === "....") {
-						dotsStr = ".";
-					}
-					if(performance.now() - now > 2000) {
-						animationDone = true;
-					}
-					if(animationDone && loadDone) {
-						clearInterval(dotsTimeout);
-						document.getElementById("loading").style = "opacity: 0; pointer-events: none";
-						document.body.style.overflow = "";
-					}
-				}, 500);
-				
-				document.addEventListener("DOMContentLoaded", () => {
-					loadDone = true;
-				});
-			} else {
-				document.getElementById("loading").style = "opacity: 0; pointer-events: none";
-			}
-		
+			const loadingScreen = document.getElementById('loading');
+
+			window.addEventListener('load', (event) => {
+  			console.log('page is fully loaded');
+				loadingScreen.style.opacity = '0';
+			});
+
+			setTimeout(() => {
+  			loadingScreen.style.display = 'none';
+			}, 10000);
 		</script>
 
 		<script>
