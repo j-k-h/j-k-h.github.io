@@ -1,8 +1,9 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
   user-select: none;
+  font-family: 'Fragment Mono', monospace;
+  color: white;
 }
 
 #wrapper {
@@ -20,6 +21,16 @@ html, body {
 }
 
 span {
-  color: white;
   mix-blend-mode: difference;
+}
+
+#info {
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: black;
+  padding: 0.5em;
+  bottom: 0;
+  text-align: center;
 }

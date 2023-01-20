@@ -27,7 +27,6 @@ function generateRandomColor() {
 
 function setColor(element) {
   let color = generateRandomColor();
-  console.log(color[0]);
   element.style.backgroundColor = color[0];
   element.innerHTML = "<span>" + color[1] + "</span>"; 
 }
