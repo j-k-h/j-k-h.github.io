@@ -62,6 +62,11 @@ window.addEventListener("keydown", event => {
       document.getElementById("wrapper").removeChild(document.getElementById("wrapper").lastChild);
     }
   }
+
+  if (event.key == "Escape") {
+    document.getElementById("wrapper").innerHTML = "";
+    addNewColor();
+  }
 });
 
 window.addEventListener("mousedown", event => {
