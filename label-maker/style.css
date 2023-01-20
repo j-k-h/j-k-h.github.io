@@ -1,0 +1,31 @@
+:root {
+  --foreground: invert(13%) sepia(97%) saturate(6543%) hue-rotate(4deg) brightness(98%) contrast(115%);
+  --spacing: 0.1%;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#wrapper {
+  width: calc(100vw - 4em);
+  height: calc(100vh - 4em);
+  display: flex;
+}
+
+.letter {
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0 var(--spacing);
+  filter: var(--foreground);
+}
+
+#space {
+  width: 10%;
+}
