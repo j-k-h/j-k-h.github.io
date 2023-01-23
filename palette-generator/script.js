@@ -28,7 +28,13 @@ function generateRandomColor() {
 function setColor(element) {
   let color = generateRandomColor();
   element.style.backgroundColor = color[0];
-  element.innerHTML = "<span>" + color[1] + "</span>"; 
+  element.innerHTML = "<span>" + color[1] + "</span>" + "<span id='color-name'>Loading...</span>";
+  element.setAttribute("data-hex", color[1]); 
+
+  let rawHex = color[1].slice(1);
+  fetch("https://api.color.pizza/v1/?values=" + rawHex)
+    .then(response => response.json())
+    .then(data => element.children[1].innerHTML = "<span>" + data.paletteTitle + "</span>");
 }
 
 function addNewColor() { // ADDS A DIV
@@ -50,30 +56,24 @@ function generatePalette() { // GENERATES COLORS FOR ALL DIVS
 window.addEventListener("keydown", event => {
   if (event.key == "r") {
     generatePalette();
-  }
-
-  if (event.key == "ArrowUp") {
+  } else if (event.key == "ArrowUp") {
     addNewColor();
-  }
-
-  if (event.key == "ArrowDown") {
+  } else if (event.key == "ArrowDown") {
     if (i > 0) {
       i--;
       document.getElementById("wrapper").removeChild(document.getElementById("wrapper").lastChild);
     }
-  }
-
-  if (event.key == "Escape") {
+  } else if (event.key == "Escape") {
     document.getElementById("wrapper").innerHTML = "";
     addNewColor();
   }
 });
 
 window.addEventListener("mousedown", event => {
-  let copiedText = event.target.innerText;
-  navigator.clipboard.writeText(copiedText);
+  let rememberContent = event.target.innerHTML;
+  navigator.clipboard.writeText(event.target.dataset.hex);
   event.target.innerHTML = "<span>copied!</span>";
   setTimeout(() => {
-    event.target.innerHTML = "<span>" + copiedText + "</span>";
+    event.target.innerHTML = rememberContent;
   }, 1000)
 })
