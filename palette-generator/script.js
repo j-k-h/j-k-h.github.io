@@ -43,7 +43,7 @@ function setGradient(element) {
   let color1 = generateRandomColor();
   let color2 = generateRandomColor();
   element.style.background = "linear-gradient(" + color1[0] + "," + color2[0] + ")" ;
-  element.innerHTML = "<span id='copied'>copied!</span><span class='gradient-colorA'>" + color1[1] + "<span id='colorA-name'><br>Loading...</span></span><span class='gradient-colorB'>" + color2[1] + "<span id='colorB-name'><br>Loading...</span></span>";
+  element.innerHTML = "<span class='gradient-colorA'>" + color1[1] + "<span id='colorA-name'><br>Loading...</span></span><span class='gradient-colorB'>" + color2[1] + "<span id='colorB-name'><br>Loading...</span></span>";
   element.setAttribute("data-hex", color1[1] + " → " + color2[1]);
 
   let rawHex1 = color1[1].slice(1);
@@ -51,8 +51,8 @@ function setGradient(element) {
   fetch("https://api.color.pizza/v1/?values=" + rawHex1 + "," + rawHex2)
     .then(response => response.json())
     .then((data)=>{ 
-      element.children[1].children[0].innerHTML = "<br><span>" + data.colors[0].name + "</span>";
-      element.children[2].children[0].innerHTML = "<br><span>" + data.colors[1].name + "</span>";
+      element.children[0].children[0].innerHTML = "<br><span>" + data.colors[0].name + "</span>";
+      element.children[1].children[0].innerHTML = "<br><span>" + data.colors[1].name + "</span>";
      })
 }
 

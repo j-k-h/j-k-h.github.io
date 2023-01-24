@@ -24,7 +24,7 @@ html, body {
 
 .gradient-colorA {
   display: block;
-  padding-bottom: 80vh;
+  margin-bottom: 80vh;
 }
 
 .gradient-colorB {
