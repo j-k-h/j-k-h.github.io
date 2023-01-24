@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   user-select: none;
   font-family: 'Fragment Mono', monospace;
+  text-align: center;
   color: white;
 }
 
@@ -21,6 +22,16 @@ html, body {
   flex-direction: column;
 }
 
+.gradient-colorA {
+  display: block;
+  padding-bottom: 80vh;
+}
+
+.gradient-colorB {
+  display: block;
+  transform: translateY(-3em);
+}
+
 span {
   mix-blend-mode: difference;
 }
@@ -33,5 +44,14 @@ span {
   background-color: black;
   padding: 0.5em;
   bottom: 0;
-  text-align: center;
+}
+
+#copied {
+  display: none;
+}
+
+#new {
+  font-size: 0.8em;
+  vertical-align: super;
+  color: #fe2e2e;
 }

@@ -1,4 +1,5 @@
 let i = 1;
+let gradientMode = false;
 
 function generateRandomColor() {
   let redValue = Math.floor(Math.random() * (256));
@@ -27,6 +28,7 @@ function generateRandomColor() {
 
 function setColor(element) {
   let color = generateRandomColor();
+  element.style.background = "";
   element.style.backgroundColor = color[0];
   element.innerHTML = "<span>" + color[1] + "</span>" + "<span id='color-name'>Loading...</span>";
   element.setAttribute("data-hex", color[1]); 
@@ -37,19 +39,44 @@ function setColor(element) {
     .then(data => element.children[1].innerHTML = "<span>" + data.paletteTitle + "</span>");
 }
 
+function setGradient(element) {
+  let color1 = generateRandomColor();
+  let color2 = generateRandomColor();
+  element.style.background = "linear-gradient(" + color1[0] + "," + color2[0] + ")" ;
+  element.innerHTML = "<span id='copied'>copied!</span><span class='gradient-colorA'>" + color1[1] + "<span id='colorA-name'><br>Loading...</span></span><span class='gradient-colorB'>" + color2[1] + "<span id='colorB-name'><br>Loading...</span></span>";
+  element.setAttribute("data-hex", color1[1] + " → " + color2[1]);
+
+  let rawHex1 = color1[1].slice(1);
+  let rawHex2 = color2[1].slice(1);
+  fetch("https://api.color.pizza/v1/?values=" + rawHex1 + "," + rawHex2)
+    .then(response => response.json())
+    .then((data)=>{ 
+      element.children[1].children[0].innerHTML = "<br><span>" + data.colors[0].name + "</span>";
+      element.children[2].children[0].innerHTML = "<br><span>" + data.colors[1].name + "</span>";
+     })
+}
+
 function addNewColor() { // ADDS A DIV
   i++
   const newColor = document.createElement("div");
   newColor.id = "color" + i;
   newColor.className = "color";
-  setColor(newColor);
+  if (gradientMode == false) {
+    setColor(newColor);;
+  } else {
+    setGradient(newColor);
+  }
   document.getElementById("wrapper").appendChild(newColor);
   return i;
 }
 
-function generatePalette() { // GENERATES COLORS FOR ALL DIVS
+function generatePalette() {
   for (let step = 1; step <= i; step++) {
-    setColor(document.getElementById("color" + step));
+    if (gradientMode == false) {
+      setColor(document.getElementById("color" + step));
+    } else {
+      setGradient(document.getElementById("color" + step));
+    }
   }
 }
 
@@ -65,7 +92,12 @@ window.addEventListener("keydown", event => {
     }
   } else if (event.key == "Escape") {
     document.getElementById("wrapper").innerHTML = "";
+    i = 0;
+    gradientMode = false;
     addNewColor();
+  } else if (event.key == "g") {
+    gradientMode = !gradientMode;
+    generatePalette();
   }
 });
 
