@@ -4,7 +4,7 @@ let gradientMode = false;
 function generateRandomColor() {
   let redValue = Math.floor(Math.random() * (256));
   let redValueHex = redValue.toString(16);
-  if (redValueHex.length == 1){
+  if (redValueHex.length == 1) {
     redValueHex = "0" + redValueHex;
   }
 
@@ -30,30 +30,30 @@ function setColor(element) {
   let color = generateRandomColor();
   element.style.background = "";
   element.style.backgroundColor = color[0];
-  element.innerHTML = "<span>" + color[1] + "</span>" + "<span id='color-name'>Loading...</span>";
-  element.setAttribute("data-hex", color[1]); 
+  element.innerHTML = "<span>" + color[1] + "</span>" + "<span class='color-name'>Loading...</span>";
+  element.setAttribute("data-hex", color[1]);
 
   let rawHex = color[1].slice(1);
   fetch("https://api.color.pizza/v1/?values=" + rawHex)
     .then(response => response.json())
-    .then(data => element.children[1].innerHTML = "<span>" + data.paletteTitle + "</span>");
+    .then(data => element.children[1].innerHTML = data.paletteTitle);
 }
 
 function setGradient(element) {
   let color1 = generateRandomColor();
   let color2 = generateRandomColor();
-  element.style.background = "linear-gradient(" + color1[0] + "," + color2[0] + ")" ;
-  element.innerHTML = "<span class='gradient-colorA'>" + color1[1] + "<span id='colorA-name'><br>Loading...</span></span><span class='gradient-colorB'>" + color2[1] + "<span id='colorB-name'><br>Loading...</span></span>";
+  element.style.background = "linear-gradient(" + color1[0] + "," + color2[0] + ")";
+  element.innerHTML = "<span class='gradient-colorA'>" + color1[1] + "</span><span class='color-name' id='colorA-name'>Loading...</span><span class='gradient-colorB'>" + color2[1] + "</span><span class='color-name' id='colorB-name'>Loading...</span>";
   element.setAttribute("data-hex", color1[1] + " → " + color2[1]);
 
   let rawHex1 = color1[1].slice(1);
   let rawHex2 = color2[1].slice(1);
   fetch("https://api.color.pizza/v1/?values=" + rawHex1 + "," + rawHex2)
     .then(response => response.json())
-    .then((data)=>{ 
-      element.children[0].children[0].innerHTML = "<br><span>" + data.colors[0].name + "</span>";
-      element.children[1].children[0].innerHTML = "<br><span>" + data.colors[1].name + "</span>";
-     })
+    .then((data) => {
+      element.children[1].innerHTML = data.colors[0].name;
+      element.children[3].innerHTML = data.colors[1].name;
+    })
 }
 
 function addNewColor() { // ADDS A DIV
@@ -86,7 +86,7 @@ window.addEventListener("keydown", event => {
   } else if (event.key == "ArrowUp") {
     addNewColor();
   } else if (event.key == "ArrowDown") {
-    if (i > 0) {
+    if (i > 1) {
       i--;
       document.getElementById("wrapper").removeChild(document.getElementById("wrapper").lastChild);
     }
@@ -98,14 +98,31 @@ window.addEventListener("keydown", event => {
   } else if (event.key == "g") {
     gradientMode = !gradientMode;
     generatePalette();
+  } else if (event.key == "x") {
+    document.getElementById("info").style.display = "none";
   }
 });
 
+let working = false
+
 window.addEventListener("mousedown", event => {
+  if (working) return
+  working = true
   let rememberContent = event.target.innerHTML;
-  navigator.clipboard.writeText(event.target.dataset.hex);
-  event.target.innerHTML = "<span>copied!</span>";
-  setTimeout(() => {
-    event.target.innerHTML = rememberContent;
-  }, 1000)
+
+  if (event.target.classList.contains('color')) {
+    navigator.clipboard.writeText(event.target.dataset.hex);
+    event.target.innerHTML = "<span>copied!</span>";
+    setTimeout(() => {
+      event.target.innerHTML = rememberContent;
+      working = false
+    }, 1000)
+  } else {
+    navigator.clipboard.writeText(event.target.innerHTML);
+    event.target.innerHTML = "<span>copied!</span>";
+    setTimeout(() => {
+      event.target.innerHTML = rememberContent;
+      working = false
+    }, 1000)
+  }
 })
