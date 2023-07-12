@@ -27,15 +27,24 @@ html, body {
   margin-bottom: 70vh;
 }
 
-span {
-  mix-blend-mode: difference;
-}
-
 #info {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   pointer-events: none;
   position: absolute;
   width: calc(100% - 1em);
-  background-color: black;
   padding: 0.5em;
+  background-color: black;
   bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  min-height: 100%;
+  max-height: 100vh;
+  margin: 0;
+  border: 0;
+  border-left: 1px solid white;
 }
