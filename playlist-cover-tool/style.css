@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#artwork, #controls {
+  height: calc(100% - 2em);
+  border-radius: .5em;
+  background-color: #eee;
+}
+
+#artwork {
+  margin: 1em;
+  aspect-ratio: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#controls {
+  margin: 1em 1em 1em 0;
+  width: 100%;
+  padding: 2em;
+  position: relative;
+}
+
+small {
+  display: block;
+  padding-bottom: .25em;
+}
+
+input[type="text"] {
+  font-size: 1em;
+  width: calc(50% - 1rem);
+  padding: 0.5rem;
+}
+
+input[type="range"] {
+  width: 95%;
+  padding: 0.5rem;
+}
+
+button {
+  width: calc(50% - 0.25rem);
+  background-color: rgb(255, 255, 255);
+  font-size: 1em;
+  padding: 1em;
+  border-radius: .25em;
+  border: none;
+  transition: .125s;
+  cursor: pointer;
+}
+
+.control-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-aligned {
+  justify-content: start;
+  gap: .5em;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 98%);
+}
+
+#save-button {
+  background-color: black;
+  color: white;
+}
+
+#save-button:hover {
+  background-color: #222;
+}
+
+.clr-field button {
+  display: none !important;
+}
+
+hr {
+  border: 0.5px solid #ddd;
+  margin: 1em 0;
+}
+
+#text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4em;
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: -0.04em;
+}
+
+#text p {
+  margin: 2rem;
+}
+
+@keyframes scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.0025); }
+}
+
+.scale {
+  animation: scale 0.2s ease-in;
+}
+
+footer {
+  width: calc(100% - 4em);
+  display: flex;
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  justify-content: space-between;
+  color: gray;
+}
+
+footer a {
+  color: gray;
+}
+
+footer a:hover {
+  color: rgb(45, 45, 45);
+}

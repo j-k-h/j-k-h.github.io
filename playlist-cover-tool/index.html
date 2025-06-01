@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playlist Artwork Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="artwork">
+      <div id="text">
+        <p id="month-text">month</p>
+        <p id="year-text">year</p>
+      </div>
+    </div>
+    <div id="controls">
+      <small>Text content</small>
+      <div class="control-row">
+        <input type="checkbox" id="show-text" name="show-text" checked>
+        <input type="text" id="month-control" name="month" placeholder="Enter month">
+        <input type="text" id="year-control" name="year" placeholder="Enter year">
+      </div>
+      <hr>
+      <small>Text color</small>
+      <div>
+        <input type="text" data-coloris id="text-color" name="text-color" value="#ffffff" />
+      </div>
+      <hr>
+      <small>Complexity</small>
+      <div class="control-row left-aligned">
+        <input type="checkbox" id="random-complexity" name="random-complexity" checked>
+        <p>Random?</p>
+      </div>
+      <div class="control-row">
+        <p>0</p>
+        <input type="range" id="gradient-stops" min="2" max="10" value="10" step="1">
+      </div>
+      <hr>
+      <button onclick="generateRandomGradient()" id="generate-gradient">Regenerate gradient (R)</button>
+      <button id="save-button">Save image (S)</button>
+      <footer>
+        <p>Made by <a href="https://jkh.work" target="_blank">jkh</a></p>
+        <p>v1.0</p>
+      </footer>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+</body> 
+</html>
