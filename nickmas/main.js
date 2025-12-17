@@ -306,9 +306,6 @@ function animate() {
     // Keep the container centered
     matchesDisplay.style.transform = 'translateX(-50%)';
     
-    // Update spin counter display (for countdown timer)
-    updateSpinCounterDisplay();
-    
     renderer.render(scene, camera);
 }
 
@@ -378,6 +375,33 @@ function getTimeUntilNextDay() {
     return { hours, minutes, seconds };
 }
 
+// Set up countdown timer that only runs when out of spins
+let countdownInterval = null;
+
+function startCountdownIfNeeded() {
+    const remaining = getSpinsRemaining();
+    if (remaining === 0 && !countdownInterval) {
+        // Start countdown timer when out of spins
+        countdownInterval = setInterval(() => {
+            const currentRemaining = getSpinsRemaining();
+            if (currentRemaining === 0) {
+                updateSpinCounterDisplay();
+            } else {
+                // Stop countdown if spins are available again
+                if (countdownInterval) {
+                    clearInterval(countdownInterval);
+                    countdownInterval = null;
+                }
+                updateSpinCounterDisplay();
+            }
+        }, 1000);
+    } else if (remaining > 0 && countdownInterval) {
+        // Stop countdown if spins are available
+        clearInterval(countdownInterval);
+        countdownInterval = null;
+    }
+}
+
 function updateSpinCounterDisplay() {
     const remaining = getSpinsRemaining();
     
@@ -387,6 +411,9 @@ function updateSpinCounterDisplay() {
         const time = getTimeUntilNextDay();
         spinCounter.textContent = `Out of spins! Next spin available in ${time.hours}h ${time.minutes}m ${time.seconds}s`;
     }
+    
+    // Start or stop countdown timer as needed
+    startCountdownIfNeeded();
 }
 
 function resetSpinCounter() {
@@ -414,9 +441,6 @@ wrapTextInSpans('Click to spin');
 
 // Initialize spin counter display
 updateSpinCounterDisplay();
-
-// Update spin counter every second (for countdown)
-setInterval(updateSpinCounterDisplay, 1000);
 
 // Track if 7 key is being held down (for debug mode)
 let isSevenKeyPressed = false;
