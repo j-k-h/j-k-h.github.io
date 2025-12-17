@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'HubotSans';
+    src: url('tex/HubotSans_Condensed-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #000000;
+    font-family: 'Arial', sans-serif;
+}
+
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    display: block;
+}
+
+#matches-display {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4em;
+    color: rgb(238, 230, 167);
+    z-index: 100;
+    font-family: 'Ultra', 'Arial', sans-serif;
+}
+
+#jackpot-display {
+
+}
