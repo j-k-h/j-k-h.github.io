@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Comic Sans MS';
+    src: url('ComicSansMS-Bold.woff2') format('woff2'),
+        url('ComicSansMS-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +19,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    font-weight: bold;
 }
 
 #canvas-container {
@@ -30,7 +40,6 @@ canvas {
     font-size: 4em;
     color: yellow;
     z-index: 100;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif;
     text-shadow: 0 0 50px black;
 }
 
@@ -42,7 +51,6 @@ canvas {
     transform: translate(-50%, -50%);
     color: yellow;
     z-index: 100;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif;
     text-align: center;
     text-shadow: 0 0 50px black;
 }
@@ -58,7 +66,6 @@ a {
     transform: translateX(-50%);
     color: yellow;
     z-index: 100;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif;
     font-size: 1.5em;
     text-align: center;
     text-shadow: 0 0 50px black;
