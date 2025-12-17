@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'HubotSans';
-    src: url('tex/HubotSans_Condensed-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +6,10 @@
 
 body {
     overflow: hidden;
-    background: #000000;
+    background-image: url('tex/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: 'Arial', sans-serif;
 }
 
@@ -32,11 +28,38 @@ canvas {
     left: 50%;
     transform: translateX(-50%);
     font-size: 4em;
-    color: rgb(238, 230, 167);
+    color: yellow;
     z-index: 100;
-    font-family: 'Ultra', 'Arial', sans-serif;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    text-shadow: 0 0 50px black;
 }
 
 #jackpot-display {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellow;
+    z-index: 100;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    text-align: center;
+    text-shadow: 0 0 50px black;
+}
 
+a {
+    color: yellow;
+}
+
+#spin-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: yellow;
+    z-index: 100;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: 0 0 50px black;
 }

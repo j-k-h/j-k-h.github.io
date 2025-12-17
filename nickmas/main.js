@@ -281,6 +281,8 @@ function animate() {
         } else if (pendingMatches === 3) {
             matchText = 'HOLY SHIT!!!!!';
             jackpotDisplay.style.display = 'block';
+            // Change background to win.gif when jackpot is hit
+            document.body.style.backgroundImage = "url('tex/win.gif')";
         } else {
             matchText = `${pendingMatches} matches`;
             jackpotDisplay.style.display = 'none';
@@ -304,6 +306,9 @@ function animate() {
     // Keep the container centered
     matchesDisplay.style.transform = 'translateX(-50%)';
     
+    // Update spin counter display (for countdown timer)
+    updateSpinCounterDisplay();
+    
     renderer.render(scene, camera);
 }
 
@@ -317,9 +322,80 @@ window.addEventListener('resize', () => {
 // Get matches display element
 const matchesDisplay = document.getElementById('matches-display');
 const jackpotDisplay = document.getElementById('jackpot-display');
+const spinCounter = document.getElementById('spin-counter');
 
 // Variable to store pending matches count (updated when animation completes)
 let pendingMatches;
+
+// Daily spin limit management
+const MAX_SPINS_PER_DAY = 20;
+const SPIN_STORAGE_KEY = 'slotMachineSpins';
+const DATE_STORAGE_KEY = 'slotMachineDate';
+
+function getTodayDateString() {
+    const today = new Date();
+    return `${today.getFullYear()}-${today.getMonth()}-${today.getDate()}`;
+}
+
+function getSpinsRemaining() {
+    const today = getTodayDateString();
+    const storedDate = localStorage.getItem(DATE_STORAGE_KEY);
+    const storedSpins = localStorage.getItem(SPIN_STORAGE_KEY);
+    
+    // If it's a new day, reset spins
+    if (storedDate !== today) {
+        localStorage.setItem(DATE_STORAGE_KEY, today);
+        localStorage.setItem(SPIN_STORAGE_KEY, MAX_SPINS_PER_DAY.toString());
+        return MAX_SPINS_PER_DAY;
+    }
+    
+    // Return remaining spins for today
+    return storedSpins ? parseInt(storedSpins, 10) : MAX_SPINS_PER_DAY;
+}
+
+function useSpin() {
+    const remaining = getSpinsRemaining();
+    if (remaining > 0) {
+        const today = getTodayDateString();
+        localStorage.setItem(DATE_STORAGE_KEY, today);
+        localStorage.setItem(SPIN_STORAGE_KEY, (remaining - 1).toString());
+        return true;
+    }
+    return false;
+}
+
+function getTimeUntilNextDay() {
+    const now = new Date();
+    const tomorrow = new Date(now);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    tomorrow.setHours(0, 0, 0, 0);
+    
+    const diff = tomorrow - now;
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    return { hours, minutes, seconds };
+}
+
+function updateSpinCounterDisplay() {
+    const remaining = getSpinsRemaining();
+    
+    if (remaining > 0) {
+        spinCounter.textContent = `Spins remaining: ${remaining}/${MAX_SPINS_PER_DAY}`;
+    } else {
+        const time = getTimeUntilNextDay();
+        spinCounter.textContent = `Out of spins! Next spin available in ${time.hours}h ${time.minutes}m ${time.seconds}s`;
+    }
+}
+
+function resetSpinCounter() {
+    const today = getTodayDateString();
+    localStorage.setItem(DATE_STORAGE_KEY, today);
+    localStorage.setItem(SPIN_STORAGE_KEY, MAX_SPINS_PER_DAY.toString());
+    updateSpinCounterDisplay();
+    console.log('Spin counter reset!');
+}
 
 // Function to wrap text in spans for per-character animation
 function wrapTextInSpans(text) {
@@ -336,17 +412,63 @@ function wrapTextInSpans(text) {
 // Initialize text with spans
 wrapTextInSpans('Click to spin');
 
+// Initialize spin counter display
+updateSpinCounterDisplay();
+
+// Update spin counter every second (for countdown)
+setInterval(updateSpinCounterDisplay, 1000);
+
+// Track if 7 key is being held down (for debug mode)
+let isSevenKeyPressed = false;
+
+// Track 7 key state
+window.addEventListener('keydown', (event) => {
+    if (event.key === '7' || event.keyCode === 55) {
+        isSevenKeyPressed = true;
+    }
+});
+
+window.addEventListener('keyup', (event) => {
+    if (event.key === '7' || event.keyCode === 55) {
+        isSevenKeyPressed = false;
+    }
+});
+
 // Start animation
 animate();
 
 // Click to spin all cylinders
-renderer.domElement.addEventListener('click', () => {
+renderer.domElement.addEventListener('click', (event) => {
     // Check if any cylinder is still spinning
     const anySpinning = spinStates.some(state => state.isSpinning);
     if (anySpinning) return;
     
+    // 7 key + click: resets spin counter and forces jackpot (debug mode)
+    const forceJackpot = isSevenKeyPressed;
+    if (forceJackpot) {
+        resetSpinCounter();
+    }
+    
+    // Check if user has spins remaining (skip check for 7 key debug mode)
+    if (!forceJackpot) {
+        const remaining = getSpinsRemaining();
+        if (remaining <= 0) {
+            // Out of spins, don't allow spin
+            return;
+        }
+    }
+    
     // Hide jackpot display when starting a new spin
     jackpotDisplay.style.display = 'none';
+    // Reset background to original when starting a new spin
+    document.body.style.backgroundImage = "url('tex/bg.jpg')";
+    
+    // Use a spin (unless in debug mode)
+    if (!forceJackpot) {
+        useSpin();
+        updateSpinCounterDisplay();
+    }
+    const targetFace = forceJackpot ? 0 : null; // Force all to land on face 0 for jackpot
     
     const landingFaces = [];
     
@@ -365,30 +487,54 @@ renderer.domElement.addEventListener('click', () => {
         const rotationOffset = slotMachine.userData.rotationOffset;
         state.spinStartRotation = slotMachine.rotation.x - rotationOffset;
         
-        // Generate random rotation between 36 and 1440 degrees, always divisible by 36
-        // Calculate range in terms of 36-degree steps
-        const minSteps = minRotationDegrees / 36; // 1 step
-        const maxSteps = maxRotationDegrees / 36; // 40 steps
-        // Generate random integer number of steps
-        const randomSteps = Math.floor(Math.random() * (maxSteps - minSteps + 1)) + minSteps;
-        // Convert to degrees (always divisible by 36) and then to radians
-        const randomDegrees = randomSteps * 36;
-        state.spinTotalRotationDegrees = randomDegrees;
-        state.spinTotalRotation = (randomDegrees * Math.PI) / 180;
+        let landingFaceIndex;
         
-        // Calculate which face it will land on (before animation)
-        // Current absolute rotation in degrees
-        const currentRotationDegrees = (slotMachine.rotation.x * 180) / Math.PI;
-        // Final rotation will be current + spin amount
-        const finalRotationDegrees = currentRotationDegrees + state.spinTotalRotationDegrees;
-        // Account for the 18-degree offset and determine face index
-        // Each face is 36 degrees, positions are at multiples of 36 + 18
-        // Subtract 18 to align with face boundaries, then divide by 36
-        const facePosition = (finalRotationDegrees - 18) / 36;
-        // Use modulo 10 to wrap around and get face index (0-9)
-        let faceIndex = Math.round(facePosition) % 10;
-        // Handle negative modulo
-        const landingFaceIndex = faceIndex < 0 ? faceIndex + 10 : faceIndex;
+        if (forceJackpot && targetFace !== null) {
+            // Force all cylinders to land on the same face for jackpot testing
+            // Calculate the rotation needed to land on targetFace
+            const currentRotationDegrees = (slotMachine.rotation.x * 180) / Math.PI;
+            // Target position is at (targetFace * 36) + 18 degrees
+            const targetRotationDegrees = (targetFace * 36) + 18;
+            // Calculate the difference, ensuring we spin at least one full rotation
+            let rotationDiff = targetRotationDegrees - currentRotationDegrees;
+            // Normalize to positive and add at least 360 degrees
+            while (rotationDiff < 360) {
+                rotationDiff += 360;
+            }
+            // Round to nearest multiple of 36
+            const steps = Math.ceil(rotationDiff / 36);
+            const finalRotationDegrees = steps * 36;
+            
+            state.spinTotalRotationDegrees = finalRotationDegrees;
+            state.spinTotalRotation = (finalRotationDegrees * Math.PI) / 180;
+            landingFaceIndex = targetFace;
+        } else {
+            // Normal random behavior
+            // Generate random rotation between 36 and 1440 degrees, always divisible by 36
+            // Calculate range in terms of 36-degree steps
+            const minSteps = minRotationDegrees / 36; // 1 step
+            const maxSteps = maxRotationDegrees / 36; // 40 steps
+            // Generate random integer number of steps
+            const randomSteps = Math.floor(Math.random() * (maxSteps - minSteps + 1)) + minSteps;
+            // Convert to degrees (always divisible by 36) and then to radians
+            const randomDegrees = randomSteps * 36;
+            state.spinTotalRotationDegrees = randomDegrees;
+            state.spinTotalRotation = (randomDegrees * Math.PI) / 180;
+            
+            // Calculate which face it will land on (before animation)
+            // Current absolute rotation in degrees
+            const currentRotationDegrees = (slotMachine.rotation.x * 180) / Math.PI;
+            // Final rotation will be current + spin amount
+            const finalRotationDegrees = currentRotationDegrees + state.spinTotalRotationDegrees;
+            // Account for the 18-degree offset and determine face index
+            // Each face is 36 degrees, positions are at multiples of 36 + 18
+            // Subtract 18 to align with face boundaries, then divide by 36
+            const facePosition = (finalRotationDegrees - 18) / 36;
+            // Use modulo 10 to wrap around and get face index (0-9)
+            let faceIndex = Math.round(facePosition) % 10;
+            // Handle negative modulo
+            landingFaceIndex = faceIndex < 0 ? faceIndex + 10 : faceIndex;
+        }
         
         landingFaces.push(landingFaceIndex);
     });
@@ -406,5 +552,8 @@ renderer.domElement.addEventListener('click', () => {
     pendingMatches = maxMatches;
     
     // Output number of matching faces
+    if (forceJackpot) {
+        console.log('DEBUG: Forced jackpot! (7 key + click)');
+    }
     console.log(`${maxMatches} matching face${maxMatches > 1 ? 's' : ''}`);
 });
