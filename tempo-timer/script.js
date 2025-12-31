@@ -10,6 +10,7 @@ const repProgressBarLeft = document.querySelector('.rep-progress-bar-left');
 const repProgressBarRight = document.querySelector('.rep-progress-bar-right');
 const tempoProgressBar = document.querySelector('.tempo-progress-bar');
 const countdownInput = document.getElementById('countdown-input');
+const countdownCheckbox = document.getElementById('countdown-checkbox');
 const alternatingCheckbox = document.getElementById('alternating-checkbox');
 const alternatingLeftRadio = document.getElementById('alternating-left-radio');
 const alternatingRightRadio = document.getElementById('alternating-right-radio');
@@ -28,6 +29,7 @@ let tempoCount = 0;
 let repCount = 0;
 let isRunning = false;
 let isCountdown = false;
+let hasStarted = false;
 let isHoldPhase = false;
 let cycleCount = 0;
 let startTime = 0;
@@ -289,11 +291,25 @@ function startCountdown() {
     if (isRunning || isCountdown) return;
     updateButtonText();
     
+    // Check if countdown is enabled
+    const countdownEnabled = countdownCheckbox ? countdownCheckbox.checked : false;
+    
+    if (!countdownEnabled) {
+        // Skip countdown and start timer directly
+        startTimer();
+        return;
+    }
+    
     const countdownDuration = parseInt(countdownInput.value) || 3;
     const clampedDuration = Math.max(1, Math.min(10, countdownDuration));
     
     isCountdown = true;
     let remaining = clampedDuration;
+    
+    // Add countdown class to timer
+    if (timerContainer) {
+        timerContainer.classList.add('countdown');
+    }
     
     // Update display immediately
     if (timerDisplay) {
@@ -314,6 +330,10 @@ function startCountdown() {
             clearInterval(countdownInterval);
             countdownInterval = null;
             isCountdown = false;
+            // Remove countdown class before starting timer
+            if (timerContainer) {
+                timerContainer.classList.remove('countdown');
+            }
             startTimer();
         }
     }, 1000);
@@ -323,6 +343,7 @@ function startCountdown() {
 function startTimer() {
     if (!isRunning) {
         isRunning = true;
+        hasStarted = true;
         // Reset everything when starting
         repCount = 1;
         tempoCount = 0;
@@ -407,7 +428,7 @@ function stopTimer() {
             timerDisplay.textContent = '00:00:00';
         }
         if (timerContainer) {
-            timerContainer.classList.remove('running');
+            timerContainer.classList.remove('countdown', 'running');
         }
     }
     updateButtonText();
@@ -420,7 +441,7 @@ function updateButtonText() {
             startStopButton.textContent = 'Stop';
             startStopButton.style.backgroundColor = 'var(--red)';
         } else {
-            startStopButton.textContent = 'Start';
+            startStopButton.textContent = hasStarted ? 'Restart' : 'Start';
             startStopButton.style.backgroundColor = 'var(--dark-blue)';
         }
     }
@@ -431,6 +452,39 @@ function handleStartStop() {
     if (isRunning || isCountdown) {
         stopTimer();
     } else {
+        // If restarting, reset the count and tempo values before countdown
+        if (hasStarted) {
+            repCount = 1;
+            repCountLeft = 1;
+            repCountRight = 1;
+            tempoCount = 0;
+            
+            // Check current alternating state
+            const currentAlternating = alternatingCheckbox ? alternatingCheckbox.checked : false;
+            
+            // Update displays
+            if (currentAlternating) {
+                if (repCountDisplayLeft) repCountDisplayLeft.textContent = repCountLeft;
+                if (repCountDisplayRight) repCountDisplayRight.textContent = repCountRight;
+            } else {
+                if (repCountDisplay) repCountDisplay.textContent = repCount;
+            }
+            if (tempoCountDisplay) tempoCountDisplay.textContent = tempoCount;
+            
+            // Reset progress bars
+            if (repProgressBar) {
+                repProgressBar.style.width = '0%';
+            }
+            if (repProgressBarLeft) {
+                repProgressBarLeft.style.width = '0%';
+            }
+            if (repProgressBarRight) {
+                repProgressBarRight.style.width = '0%';
+            }
+            if (tempoProgressBar) {
+                tempoProgressBar.style.width = '0%';
+            }
+        }
         startCountdown();
     }
     updateButtonText();

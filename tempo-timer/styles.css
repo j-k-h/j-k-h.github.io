@@ -1,11 +1,12 @@
 :root {
-    --green: #e4fad8;
+    --green: #d4ffda;
     --blue: #c4f4ff;
     --dark-blue: #386dff;
     --dark-gray: rgba(0, 0, 0, 0.1);
     --red: #ff3b3b;
-    --gray: #f0f0f0;
+    --gray: #f4f4f4;
     --yellow: #fff4c8;
+    --orange: #ffdcb9;
 }
 
 * {
@@ -99,7 +100,7 @@
 
 @keyframes scalePulse {
     0% {
-        transform: scale(1.08);
+        transform: scale(1.05);
     }
     100% {
         transform: scale(1);
@@ -133,6 +134,10 @@
     transition: background-color 0.3s ease;
     border-top: 1px solid var(--dark-gray);
     border-bottom: 1px solid var(--dark-gray);
+}
+
+.timer.countdown {
+    background-color: var(--orange);
 }
 
 .timer.running {
@@ -232,6 +237,10 @@ label[for="alternating-left-radio"] {
     }
     
     .control-group button {
+        font-size: 2vw;
+    }
+    
+    .start-stop-button {
         font-size: 2vw;
     }
 }
