@@ -1,0 +1,306 @@
+:root {
+    --green: #e4fad8;
+    --blue: #c4f4ff;
+    --dark-blue: #386dff;
+    --dark-gray: rgba(0, 0, 0, 0.1);
+    --red: #ff3b3b;
+    --gray: #f0f0f0;
+    --yellow: #fff4c8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+.app {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.counts-row {
+    display: flex;
+    width: 100%;
+}
+
+.rep-count, .tempo-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--green);
+    position: relative;
+    overflow: hidden;
+}
+
+.rep-count {
+    width: 50%;
+}
+
+.tempo-count {
+    width: 50%;
+}
+
+.counts-row.alternating .rep-count {
+    width: 25%;
+    transition: opacity 0.3s ease;
+}
+
+.counts-row.alternating .rep-count.inactive {
+    opacity: 0.3;
+}
+
+.counts-row.alternating .rep-count.active {
+    opacity: 1;
+}
+
+.counts-row.alternating .tempo-count {
+    width: 50%;
+}
+
+.tempo-count {
+    background-color: var(--blue);
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--dark-gray);
+    z-index: 0;
+}
+
+.rep-count-value, .tempo-count-value, .label {
+    position: relative;
+    z-index: 1;
+}
+
+.rep-count-value, .tempo-count-value {
+    font-size: 10vw;
+    transform: scale(1);
+    transition: transform 0.15s ease-out;
+}
+
+@keyframes scalePulse {
+    0% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.rep-count-value.animate, .tempo-count-value.animate, .timer-text.animate {
+    animation: scalePulse 0.15s ease-out;
+}
+
+.timer-text {
+    display: inline-block;
+    transform: scale(1);
+}
+
+.label {
+    font-size: 2vw;
+    font-weight: 500;
+    padding-bottom: 1.25em;
+}
+
+.timer {
+    background-color: var(--gray);
+    width: 100%;
+    font-family: 'Google Sans Code', monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2vw;
+    text-align: center;
+    padding: 0.625em;
+    transition: background-color 0.3s ease;
+    border-top: 1px solid var(--dark-gray);
+    border-bottom: 1px solid var(--dark-gray);
+}
+
+.timer.running {
+    background-color: var(--yellow);
+}
+
+.controls-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.controls {
+    display: flex;
+    gap: 1.25em;
+    padding: 1em;
+    background-color: var(--gray);
+    justify-content: flex-end;
+    align-items: stretch;
+    flex: 1;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+}
+
+.control-group label {
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+.control-group input[type="number"] {
+    width: 3.75em;
+    padding: 0.3125em;
+    font-size: 1.2vw;
+    text-align: center;
+    border: 1px solid var(--gray);
+    border-radius: 0.25em;
+}
+
+.control-group input[type="checkbox"] {
+    width: 1.25em;
+    height: 1.25em;
+    cursor: pointer;
+}
+
+.start-stop-button {
+    padding: 0.5em 1.25em;
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    background-color: var(--dark-blue);
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 5em;
+    color: white;
+}
+
+.start-stop-button:hover {
+    background-color: var(--gray);
+}
+
+.start-stop-button:active {
+    background-color: var(--gray);
+}
+
+label[for="alternating-left-radio"] {
+    padding-right: .3em;
+}
+
+/* Landscape mobile / Tablet styles */
+@media (max-width: 1024px) and (min-width: 769px), (max-height: 768px) and (orientation: landscape) {
+    .app {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .counts-row {
+        flex: 1;
+    }
+    
+    .rep-count, .tempo-count {
+        flex: 1;
+    }
+    
+    .control-group label {
+        font-size: 2vw;
+    }
+    
+    .control-group input[type="number"] {
+        font-size: 2vw;
+    }
+    
+    .control-group button {
+        font-size: 2vw;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .app {
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .counts-row {
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .rep-count, .tempo-count {
+        width: 100%;
+        flex: 1;
+    }
+    
+    .counts-row.alternating .rep-count {
+        width: 100%;
+    }
+    
+    .counts-row.alternating .tempo-count {
+        width: 100%;
+    }
+    
+    .label {
+        font-size: 4vw;
+    }
+    
+    .timer {
+        font-size: 4vw;
+    }
+    
+    .rep-count-value, .tempo-count-value {
+        font-size: 30vw;
+    }
+    
+    .controls-wrapper {
+        flex-direction: column;
+    }
+    
+    .controls {
+        flex-direction: column;
+        gap: 1em;
+        align-items: stretch;
+    }
+    
+    .start-stop-button {
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        font-size: 4vw;
+        padding: 0.75em 1.5em;
+        color: var(--gray);
+    }
+    
+    .control-group {
+        width: 100%;
+    }
+    
+    .control-group label {
+        font-size: 4vw;
+    }
+    
+    .control-group input[type="number"] {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <div class="counts-row">
+                <div class="rep-count rep-count-left">
+                    <div class="progress-bar rep-progress-bar rep-progress-bar-left"></div>
+                    <div class="rep-count-value rep-count-value-left">1</div>
+                    <div class="label">Rep</div>
+                </div>
+                <div class="rep-count rep-count-right" style="display: none;">
+                    <div class="progress-bar rep-progress-bar rep-progress-bar-right"></div>
+                    <div class="rep-count-value rep-count-value-right">1</div>
+                    <div class="label">Rep (Right)</div>
+                </div>
+                <div class="tempo-count">
+                    <div class="progress-bar tempo-progress-bar"></div>
+                    <div class="tempo-count-value">0</div>
+                    <div class="label">Tempo</div>
+                </div>
+            </div>
+            <div class="timer"><span class="timer-text">00:00:00</span></div>
+            <div class="controls-wrapper">
+                <div id="start-stop-button" class="start-stop-button">Start</div>
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="countdown-input">Countdown:</label>
+                        <input type="number" id="countdown-input" min="1" max="10" value="3">
+                    </div>
+                    <div class="control-group">
+                        <label for="alternating-checkbox">Alternating:</label>
+                        <input type="checkbox" id="alternating-checkbox">
+                        <span class="alternating-options" style="display: none;">
+                            (Start with... 
+                            <input type="radio" id="alternating-left-radio" name="alternating-side" value="left" checked>
+                            <label for="alternating-left-radio">Left</label>
+                            <input type="radio" id="alternating-right-radio" name="alternating-side" value="right">
+                            <label for="alternating-right-radio">Right</label>)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
