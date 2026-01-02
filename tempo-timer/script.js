@@ -301,7 +301,7 @@ function startCountdown() {
     }
     
     const countdownDuration = parseInt(countdownInput.value) || 3;
-    const clampedDuration = Math.max(1, Math.min(10, countdownDuration));
+    const clampedDuration = Math.max(1, countdownDuration);
     
     isCountdown = true;
     let remaining = clampedDuration;
@@ -509,8 +509,6 @@ if (countdownInput) {
         let value = parseInt(e.target.value);
         if (isNaN(value) || value < 1) {
             e.target.value = 1;
-        } else if (value > 10) {
-            e.target.value = 10;
         }
     });
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tempo Timer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +25,7 @@
                 </div>
                 <div class="tempo-count">
                     <div class="progress-bar tempo-progress-bar"></div>
-                    <div class="tempo-count-value">0</div>
+                    <div class="tempo-count-value">1</div>
                     <div class="label">Tempo</div>
                 </div>
             </div>
@@ -36,13 +36,13 @@
                     <div class="control-group">
                         <label for="countdown-checkbox">Countdown:</label>
                         <input type="checkbox" id="countdown-checkbox" checked>
-                        <input type="number" id="countdown-input" min="1" max="10" value="3">
+                        <input type="number" id="countdown-input" min="1" value="3">
                     </div>
                     <div class="control-group">
                         <label for="alternating-checkbox">Alternating:</label>
                         <input type="checkbox" id="alternating-checkbox">
                         <span class="alternating-options" style="display: none;">
-                            (Start with... 
+                            (Start with 
                             <input type="radio" id="alternating-left-radio" name="alternating-side" value="left" checked>
                             <label for="alternating-left-radio">Left</label>
                             <input type="radio" id="alternating-right-radio" name="alternating-side" value="right">

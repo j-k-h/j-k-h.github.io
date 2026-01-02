@@ -1,12 +1,12 @@
 :root {
     --green: #d4ffda;
     --blue: #c4f4ff;
+    --yellow: #ffe6ad;
+    --orange: #ffdcb9;
     --dark-blue: #386dff;
-    --dark-gray: rgba(0, 0, 0, 0.1);
     --red: #ff3b3b;
     --gray: #f4f4f4;
-    --yellow: #fff4c8;
-    --orange: #ffdcb9;
+    --tint: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -83,7 +83,7 @@
     left: 0;
     width: 0%;
     height: 100%;
-    background-color: var(--dark-gray);
+    background-color: var(--tint);
     z-index: 0;
 }
 
@@ -101,6 +101,7 @@
 @keyframes scalePulse {
     0% {
         transform: scale(1.05);
+        transform-origin: center center;
     }
     100% {
         transform: scale(1);
@@ -132,8 +133,8 @@
     text-align: center;
     padding: 0.625em;
     transition: background-color 0.3s ease;
-    border-top: 1px solid var(--dark-gray);
-    border-bottom: 1px solid var(--dark-gray);
+    border-top: 1px solid var(--tint);
+    border-bottom: 1px solid var(--tint);
 }
 
 .timer.countdown {
@@ -171,8 +172,8 @@
 }
 
 .control-group input[type="number"] {
-    width: 3.75em;
-    padding: 0.3125em;
+    width: 2em;
+    padding: 0.125em;
     font-size: 1.2vw;
     text-align: center;
     border: 1px solid var(--gray);
@@ -180,13 +181,13 @@
 }
 
 .control-group input[type="checkbox"] {
-    width: 1.25em;
-    height: 1.25em;
+    width: 1.5em;
+    height: 1.5em;
     cursor: pointer;
 }
 
 .start-stop-button {
-    padding: 0.5em 1.25em;
+    padding: 0.5em 2em;
     font-size: 1.2vw;
     font-weight: 500;
     cursor: pointer;
@@ -214,7 +215,9 @@ label[for="alternating-left-radio"] {
 }
 
 /* Landscape mobile / Tablet styles */
-@media (max-width: 1024px) and (min-width: 769px), (max-height: 768px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-width: 769px), 
+       (max-height: 768px) and (orientation: landscape),
+       (hover: none) and (pointer: coarse) and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
     .app {
         width: 100%;
         height: 100vh;
@@ -246,7 +249,9 @@ label[for="alternating-left-radio"] {
 }
 
 /* Mobile styles */
-@media (max-width: 768px) {
+@media (max-width: 768px),
+       (hover: none) and (pointer: coarse) and (max-width: 1024px),
+       (max-width: 812px) and (orientation: portrait) {
     .app {
         width: 100%;
         height: 100vh;
