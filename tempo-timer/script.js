@@ -11,6 +11,7 @@ const repProgressBarRight = document.querySelector('.rep-progress-bar-right');
 const tempoProgressBar = document.querySelector('.tempo-progress-bar');
 const countdownInput = document.getElementById('countdown-input');
 const countdownCheckbox = document.getElementById('countdown-checkbox');
+const ttsCheckbox = document.getElementById('tts-checkbox');
 const alternatingCheckbox = document.getElementById('alternating-checkbox');
 const alternatingLeftRadio = document.getElementById('alternating-left-radio');
 const alternatingRightRadio = document.getElementById('alternating-right-radio');
@@ -41,6 +42,27 @@ let alternatingCycleCount = 0;
 let repCountLeft = 1;
 let repCountRight = 1;
 let hasSwitchedOnce = false; // Track if we've completed at least one full cycle (Left -> Right -> Left)
+
+// Function to speak text using Web Speech API
+function speakText(text) {
+    // Check if TTS is enabled
+    const ttsEnabled = ttsCheckbox ? ttsCheckbox.checked : false;
+    if (!ttsEnabled) {
+        return; // Don't speak if TTS is disabled
+    }
+    
+    if ('speechSynthesis' in window) {
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+        
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 1.0; // Normal speech rate
+        utterance.pitch = 1.0; // Normal pitch
+        utterance.volume = 1.0; // Full volume
+        
+        window.speechSynthesis.speak(utterance);
+    }
+}
 
 // Function to trigger scale animation
 function triggerScaleAnimation(element) {
@@ -271,6 +293,7 @@ function updateTempoCount() {
         tempoCount = 1;
         tempoCountDisplay.textContent = tempoCount;
         triggerScaleAnimation(tempoCountDisplay);
+        speakText(String(tempoCount));
         tempoCycleStartTime = Date.now(); // Reset tempo cycle timer
         isHoldPhase = false;
     } else if (tempoCount === 3) {
@@ -278,11 +301,32 @@ function updateTempoCount() {
         tempoCountDisplay.textContent = 'Hold';
         triggerScaleAnimation(tempoCountDisplay);
         isHoldPhase = true;
+        
+        // Alternate between saying "Hold" and announcing rep count
+        let textToSpeak = 'Hold';
+        if (isAlternating) {
+            // In alternating mode, check alternatingCycleCount (0 = say "Hold", 1 = announce rep)
+            if (alternatingCycleCount === 1) {
+                // Announce the rep count for the currently active side
+                if (isLeftSide) {
+                    textToSpeak = String(repCountLeft);
+                } else {
+                    textToSpeak = String(repCountRight);
+                }
+            }
+        } else {
+            // In normal mode, check cycleCount (0 = say "Hold", 1 = announce rep)
+            if (cycleCount === 1) {
+                textToSpeak = String(repCount);
+            }
+        }
+        speakText(textToSpeak);
     } else {
         // Otherwise, just increment tempo-count
         tempoCount++;
         tempoCountDisplay.textContent = tempoCount;
         triggerScaleAnimation(tempoCountDisplay);
+        speakText(String(tempoCount));
     }
 }
 
@@ -311,10 +355,11 @@ function startCountdown() {
         timerContainer.classList.add('countdown');
     }
     
-    // Update display immediately
+    // Update display immediately and speak
     if (timerDisplay) {
         timerDisplay.textContent = String(remaining);
         triggerScaleAnimation(timerDisplay);
+        speakText(String(remaining));
     }
     
     countdownInterval = setInterval(() => {
@@ -324,6 +369,7 @@ function startCountdown() {
             if (timerDisplay) {
                 timerDisplay.textContent = String(remaining);
                 triggerScaleAnimation(timerDisplay);
+                speakText(String(remaining));
             }
         } else {
             // Countdown finished, start the timer
@@ -393,6 +439,7 @@ function startTimer() {
         tempoCount = 1;
         tempoCountDisplay.textContent = tempoCount;
         triggerScaleAnimation(tempoCountDisplay);
+        speakText(String(tempoCount));
         
         // Update timer display every 2ms for smooth display
         timerInterval = setInterval(updateTimer, 2);
@@ -423,6 +470,10 @@ function stopTimer() {
         if (countdownInterval) {
             clearInterval(countdownInterval);
             countdownInterval = null;
+        }
+        // Cancel any ongoing speech when stopping
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
         }
         if (timerDisplay) {
             timerDisplay.textContent = '00:00:00';
